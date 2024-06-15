@@ -6,28 +6,28 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.l0122037.pab_android_projek_aset.ui.home.HomeFragment"
+        android:name="com.example.project-akhir-pab.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_bluprint"
-        android:name="com.l0122037.pab_android_projek_aset.ui.bluprint.BluprintFragment"
+        android:name="com.example.project-akhir-pab.ui.bluprint.BluprintFragment"
         android:label="Bluprint"
         tools:layout="@layout/fragment_bluprint" />
     <fragment
         android:id="@+id/nav_prasarana1"
-        android:name="com.l0122037.pab_android_projek_aset.ui.prasarana.Prasarana1Fragment"
+        android:name="com.example.project-akhir-pab.ui.prasarana.Prasarana1Fragment"
         android:label="Prasarana 1"
         tools:layout="@layout/fragment_prasarana1" />
     <fragment
         android:id="@+id/nav_prasarana2"
-        android:name="com.l0122037.pab_android_projek_aset.ui.prasarana.Prasarana2Fragment"
+        android:name="com.example.project-akhir-pab.ui.prasarana.Prasarana2Fragment"
         android:label="Prasarana 2"
         tools:layout="@layout/fragment_prasarana2" />
 
     <fragment
         android:id="@+id/nav_lahan"
-        android:name="com.l0122037.pab_android_projek_aset.ui.lahan.LahanFragment"
+        android:name="com.example.project-akhir-pab.ui.lahan.LahanFragment"
         android:label="@string/menu_lahan"
         tools:layout="@layout/fragment_lahan" >
         <action

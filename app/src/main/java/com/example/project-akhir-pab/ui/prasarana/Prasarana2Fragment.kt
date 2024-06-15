@@ -1,24 +1,21 @@
-package com.l0122037.pab_android_projek_aset.ui.bluprint
+package com.example.`project-akhir-pab`.ui.prasarana
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.l0122037.pab_android_projek_aset.R
+import com.example.`project-akhir-pab`.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [BluprintFragment.newInstance] factory method to
+ * Use the [Prasarana2Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class BluprintFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class Prasarana2Fragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -35,7 +32,7 @@ class BluprintFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bluprint, container, false)
+        return inflater.inflate(R.layout.fragment_prasarana2, container, false)
     }
 
     companion object {
@@ -45,12 +42,12 @@ class BluprintFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment BluprintFragment.
+         * @return A new instance of fragment Prasarana2Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            BluprintFragment().apply {
+            Prasarana2Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

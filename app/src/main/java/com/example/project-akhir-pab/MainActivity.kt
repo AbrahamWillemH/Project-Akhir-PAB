@@ -1,4 +1,4 @@
-package com.l0122037.pab_android_projek_aset
+package com.example.`project-akhir-pab`
 
 import android.os.Bundle
 import android.view.Menu
@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.l0122037.pab_android_projek_aset.databinding.ActivityMainBinding
+import com.example.`project-akhir-pab`.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

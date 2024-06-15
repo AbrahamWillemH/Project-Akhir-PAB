@@ -1,4 +1,4 @@
-package com.l0122037.pab_android_projek_aset
+package com.example.`project-akhir-pab`
 
 import org.junit.Test
 

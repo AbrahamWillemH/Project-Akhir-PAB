@@ -10,34 +10,22 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
+        android:id="@+id/nav_aset"
+        android:name="com.example.project_akhir_pab.ui.aset.AsetFragment"
+        android:label="Aset"
+        tools:layout="@layout/fragment_aset" />
+    <action
+        android:id="@+id/action_asetFragment_to_tabelDataGedungFragment"
+        app:destination="@id/nav_tabel_data_gedung" />
+    <fragment
         android:id="@+id/nav_bluprint"
         android:name="com.example.project_akhir_pab.ui.bluprint.BluprintFragment"
         android:label="Bluprint"
         tools:layout="@layout/fragment_bluprint" />
     <fragment
-        android:id="@+id/nav_prasarana1"
-        android:name="com.example.project_akhir_pab.ui.prasarana.Prasarana1Fragment"
-        android:label="Prasarana 1"
-        tools:layout="@layout/fragment_prasarana1" />
-    <fragment
-        android:id="@+id/nav_prasarana2"
-        android:name="com.example.project_akhir_pab.ui.prasarana.Prasarana2Fragment"
-        android:label="Prasarana 2"
-        tools:layout="@layout/fragment_prasarana2" />
+        android:id="@+id/nav_tabel_data_gedung"
+        android:name="com.example.project_akhir_pab.ui.aset.TabelDataGedungFragment"
+        android:label="Tabel Data Gedung"
+        tools:layout="@layout/fragment_tabel_data_gedung" />
 
-    <fragment
-        android:id="@+id/nav_lahan"
-        android:name="com.example.project_akhir_pab.ui.lahan.LahanFragment"
-        android:label="@string/menu_lahan"
-        tools:layout="@layout/fragment_lahan" >
-        <action
-            android:id="@+id/action_nav_lahan_to_detailLahanFragment"
-            app:destination="@id/detailLahanFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/detailLahanFragment"
-        android:name="com.example.project_akhir_pab.ui.lahan.DetailLahanFragment"
-        android:label="@string/detail"
-        tools:layout="@layout/fragment_detail_lahan" />
 </navigation>

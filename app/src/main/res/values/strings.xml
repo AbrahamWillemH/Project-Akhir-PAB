@@ -93,6 +93,22 @@
         <item>10</item>
     </string-array>
 
+    <string-array name="tahun_array">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+    </string-array>
 
-
+    <string-array name="gedung_data">
+        <item>2022,Bangunan Gedung Laboratorium Permanen,1,201</item>
+        <item>2022,Bangunan Gedung Pendidikan Permanen,1,1488</item>
+        <item>2022,Bangunan Gedung Pertemuan Permanen,1,160</item>
+        <item>2022,Bangunan Untuk Kandang,4,671</item>
+        <item>2022,Gedung Pos Jaga Permanen,1,48</item>
+        <item>2022,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,60</item>
+        <item>2022,Pagar Permanen,1,1198</item>
+        <item>2022,Rumah Negara Golongan I Tipe C Permanen,1,48</item>
+        <item>2022,Tugu/Tanda Batas Administrasi Kepemilikan,1,10</item>
+        <!-- Add more items here -->
+    </string-array>
 </resources>

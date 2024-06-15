@@ -4,6 +4,10 @@
         android:icon="@drawable/ic_menu_camera"
         android:title="@string/menu_home" />
     <item
+        android:id="@+id/nav_aset"
+        android:icon="@drawable/ic_menu_aset"
+        android:title="Aset" />
+    <item
         android:id="@+id/nav_bluprint"
         android:icon="@drawable/ic_menu_bluprint"
         android:title="Bluprint" />

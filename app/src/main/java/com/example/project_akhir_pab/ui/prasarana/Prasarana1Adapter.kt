@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
-import com.l0122017.alvito.projectakhir.ui.lahan.LahanAdapter.OnItemClickCallback
+import com.example.project_akhir_pab.ui.lahan.LahanAdapter
 
 class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
     RecyclerView.Adapter<Prasarana1Adapter.PrasaranaViewHolder>() {
-    private lateinit var onItemClickCallback: OnItemClickCallback
+    private lateinit var onItemClickCallback: LahanAdapter.OnItemClickCallback
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrasaranaViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item_prasarana1, parent, false)
@@ -30,7 +30,7 @@ class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
         val txtNamaPrasarana: TextView = itemView.findViewById(R.id.txtNamaPrasarana)
         val txtJenis: TextView = itemView.findViewById(R.id.txtJenis)
     }
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+    fun setOnItemClickCallback(onItemClickCallback: LahanAdapter.OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 }

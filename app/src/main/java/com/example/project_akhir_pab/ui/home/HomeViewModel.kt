@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`.ui.home
+package com.example.project_akhir_pab.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

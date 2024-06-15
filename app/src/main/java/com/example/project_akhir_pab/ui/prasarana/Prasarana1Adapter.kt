@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`.ui.prasarana
+package com.example.project_akhir_pab.ui.prasarana
 
 // Prasarana1Adapter.kt
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.`project-akhir-pab`.R
+import com.example.project_akhir_pab.R
 
 class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
     RecyclerView.Adapter<Prasarana1Adapter.PrasaranaViewHolder>() {

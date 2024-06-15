@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`.ui.lahan
+package com.example.project_akhir_pab.ui.lahan
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.l0122017.alvito.projectakhir.ui.lahan.Lahan
 import com.l0122017.alvito.projectakhir.ui.lahan.LahanAdapter
-import com.example.`project-akhir-pab`.R
-import com.example.`project-akhir-pab`.databinding.FragmentLahanBinding
+import com.example.project_akhir_pab.R
+import com.example.project_akhir_pab.databinding.FragmentLahanBinding
 
 class LahanFragment : Fragment(), LahanAdapter.OnItemClickCallback {
 

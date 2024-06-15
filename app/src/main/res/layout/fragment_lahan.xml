@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.project-akhir-pab.ui.lahan.LahanFragment">
+    tools:context="com.example.project_akhir_pab.ui.lahan.LahanFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLokasiKepemilikanLahan"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.project-akhir-pab.ui.prasarana.Prasarana1Fragment">
+    tools:context="com.example.project_akhir_pab.ui.prasarana.Prasarana1Fragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPrasarana1"

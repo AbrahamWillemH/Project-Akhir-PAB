@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`
+package com.example.project_akhir_pab
 
 import android.os.Bundle
 import android.view.Menu

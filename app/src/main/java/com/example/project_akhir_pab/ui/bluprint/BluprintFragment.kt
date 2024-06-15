@@ -1,11 +1,11 @@
-package com.example.`project-akhir-pab`.ui.bluprint
+package com.example.project_akhir_pab.ui.bluprint
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.`project-akhir-pab`.R
+import com.example.project_akhir_pab.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

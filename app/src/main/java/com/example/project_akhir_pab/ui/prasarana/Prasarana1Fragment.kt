@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`.ui.prasarana
+package com.example.project_akhir_pab.ui.prasarana
 
 // Prasarana1Fragment.kt
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.`project-akhir-pab`.R
-import com.example.`project-akhir-pab`.databinding.FragmentPrasarana1Binding
+import com.example.project_akhir_pab.R
+import com.example.project_akhir_pab.databinding.FragmentPrasarana1Binding
 
 class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
 

@@ -1,4 +1,4 @@
-package com.example.`project-akhir-pab`
+package com.example.project_akhir_pab
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

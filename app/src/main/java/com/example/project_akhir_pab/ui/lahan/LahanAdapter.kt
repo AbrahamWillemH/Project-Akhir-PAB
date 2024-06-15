@@ -1,4 +1,4 @@
-package com.l0122017.alvito.projectakhir.ui.lahan
+package com.example.project_akhir_pab.ui.lahan
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
+import com.l0122017.alvito.projectakhir.ui.lahan.Lahan
 
 class LahanAdapter(private val listLahan: ArrayList<Lahan>) : RecyclerView.Adapter<LahanAdapter.ListViewHolder>() {
 

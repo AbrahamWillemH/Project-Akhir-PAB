@@ -12,8 +12,8 @@ class LahanAdapter(private val listLahan: ArrayList<Lahan>) : RecyclerView.Adapt
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvLahan: TextView = itemView.findViewById(R.id.txtLokasiLahan)
-        val tvLuas: TextView = itemView.findViewById(R.id.txtLuasLahan)
+        val tvLahan: TextView = itemView.findViewById(R.id.txt1)
+        val tvLuas: TextView = itemView.findViewById(R.id.txt2)
         val btnDetail: TextView = itemView.findViewById(R.id.btnDetail)
 
         fun bind(lahan: Lahan) {
@@ -27,7 +27,7 @@ class LahanAdapter(private val listLahan: ArrayList<Lahan>) : RecyclerView.Adapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item_lahan, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item, parent, false)
         return ListViewHolder(view)
     }
 

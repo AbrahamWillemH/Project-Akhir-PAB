@@ -1,6 +1,5 @@
 package com.example.project_akhir_pab.ui.prasarana
 
-// Prasarana1Fragment.kt
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,8 +13,8 @@ import com.example.project_akhir_pab.databinding.FragmentPrasarana1Binding
 
 class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
 
-    private lateinit var rvPrasarana: RecyclerView
-    private lateinit var listPrasarana: ArrayList<Prasarana>
+    private lateinit var rvPrasarana1: RecyclerView
+    private lateinit var listPrasarana1: ArrayList<Prasarana>
     private var _binding: FragmentPrasarana1Binding? = null
     private val binding get() = _binding!!
 
@@ -30,11 +29,11 @@ class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvPrasarana = binding.recyclerViewPrasarana1
-        rvPrasarana.setHasFixedSize(true)
+        rvPrasarana1 = binding.recyclerViewLokasiKepemilikanPrasarana1
+        rvPrasarana1.setHasFixedSize(true)
 
-        listPrasarana = ArrayList()
-        listPrasarana.addAll(getListPrasarana())
+        listPrasarana1 = ArrayList()
+        listPrasarana1.addAll(getListPrasarana1())
         showRecyclerList()
     }
 
@@ -43,30 +42,31 @@ class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
         _binding = null
     }
 
-    private fun getListPrasarana(): List<Prasarana> {
-        // Contoh data, sesuaikan dengan sumber data asli Anda
-        val dataNama = arrayOf("Prasarana 1", "Prasarana 2", "Prasarana 3")
-        val dataJenis = arrayOf("Jenis 1", "Jenis 2", "Jenis 3")
+    private fun getListPrasarana1(): List<Prasarana> {
+        val dataNama = resources.getStringArray(R.array.data_nama_prasarana)
+        val dataJenis = resources.getStringArray(R.array.data_jenis_prasarana)
+        val dataDeskripsi = resources.getStringArray(R.array.data_deskripsi_prasarana)
+        val dataJumlah = resources.getStringArray(R.array.data_jumlah_unit)
 
-        val listPrasarana = ArrayList<Prasarana>()
+        val listPrasarana1 = ArrayList<Prasarana>()
         for (i in dataNama.indices) {
-            val prasarana = Prasarana(dataNama[i], dataJenis[i])
-            listPrasarana.add(prasarana)
+            val prasarana1 = Prasarana(dataNama[i], dataJenis[i], dataDeskripsi[i], dataJumlah[i])
+            listPrasarana1.add(prasarana1)
         }
-        return listPrasarana
+        return listPrasarana1
     }
 
     private fun showRecyclerList() {
-        rvPrasarana.layoutManager = LinearLayoutManager(requireContext())
-        val listPrasaranaAdapter = Prasarana1Adapter(listPrasarana)
-        listPrasaranaAdapter.setOnItemClickCallback(this)
-        rvPrasarana.adapter = listPrasaranaAdapter
+        rvPrasarana1.layoutManager = LinearLayoutManager(requireContext())
+        val listPrasarana1Adapter = Prasarana1Adapter(listPrasarana1)
+        listPrasarana1Adapter.setOnItemClickCallback(this)
+        rvPrasarana1.adapter = listPrasarana1Adapter
     }
 
     override fun onItemClicked(data: Prasarana) {
         val bundle = Bundle().apply {
-            putParcelable("EXTRA_PRASARANA", data)
+            putParcelable("EXTRA_PRASARANA1", data)
         }
-        findNavController().navigate(R.id.fragment_detail_prasarana1, bundle)
+        findNavController().navigate(R.id.action_nav_prasarana1_to_detailPrasarana1Fragment, bundle)
     }
 }

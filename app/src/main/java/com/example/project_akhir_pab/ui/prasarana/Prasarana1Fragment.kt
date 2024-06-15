@@ -29,7 +29,7 @@ class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvPrasarana1 = binding.recyclerViewLokasiKepemilikanPrasarana1
+        rvPrasarana1 = binding.recyclerViewPrasarana1
         rvPrasarana1.setHasFixedSize(true)
 
         listPrasarana1 = ArrayList()

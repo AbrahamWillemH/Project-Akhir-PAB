@@ -64,28 +64,28 @@
     </string-array>
 
     <!--  PRASARANA 1  -->
-    <string-array name="data-nama-prasarana">
+    <string-array name="data_nama_prasarana">
         <item>Tanah</item>
         <item>Peralatan dan Mesin</item>
         <item>Gedung dan Bangunan</item>
         <item>Jalan dan Jembatan</item>
         <item>Irigasi</item>
     </string-array>
-    <string-array name="data-jenis-prasarana">
+    <string-array name="data_jenis_prasarana">
         <item>Tanah Hak Milik</item>
         <item>Mesin Berat</item>
         <item>Gedung Baru</item>
         <item>Jalan Baru</item>
         <item>Jalur Irigasi</item>
     </string-array>
-    <string-array name="data-deskripsi-prasarana">
+    <string-array name="data_deskripsi_prasarana">
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>
     </string-array>
-    <string-array name="data-jumlah-unit">
+    <string-array name="data_jumlah_unit">
         <item>10</item>
         <item>10</item>
         <item>10</item>

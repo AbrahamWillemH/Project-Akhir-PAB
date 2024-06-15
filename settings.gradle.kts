@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PAB_android_projek_aset"
+rootProject.name = "Project-Akhir-PAB"
 include(":app")
  

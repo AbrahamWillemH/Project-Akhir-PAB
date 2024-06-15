@@ -1,6 +1,5 @@
-package com.example.project_akhir_pab.ui.prasarana
+package com.example.project_akhir_pab.ui.bluprint
 
-// Prasarana1Adapter.kt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,17 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
-<<<<<<< Updated upstream
-import com.example.project_akhir_pab.ui.lahan.LahanAdapter
 
-class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
-    RecyclerView.Adapter<Prasarana1Adapter.PrasaranaViewHolder>() {
-    private lateinit var onItemClickCallback: LahanAdapter.OnItemClickCallback
-=======
-import com.example.project_akhir_pab.ui.prasarana.Prasarana1Adapter
-
-class Prasarana1Adapter(private val listUkm: ArrayList<Prasarana>) : RecyclerView.Adapter<Prasarana1Adapter.ListViewHolder>() {
->>>>>>> Stashed changes
+class BluprintAdapter(private val listUkm: ArrayList<Bluprint>) : RecyclerView.Adapter<BluprintAdapter.ListViewHolder>() {
 
     private var onItemClickCallback: OnItemClickCallback? = null
 
@@ -51,16 +41,11 @@ class Prasarana1Adapter(private val listUkm: ArrayList<Prasarana>) : RecyclerVie
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (lokasiLahan, statusKepemilikan, penggunaanLahan, luasLahan) = listUkm[position]
         holder.tvLahan.text = lokasiLahan
-        holder.tvLuas.text = luasLahan.toString()
+        holder.tvLuas.text = luasLahan
     }
-<<<<<<< Updated upstream
-    fun setOnItemClickCallback(onItemClickCallback: LahanAdapter.OnItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback
-=======
 
     interface OnItemClickCallback {
-        fun onItemClicked(data: Prasarana)
->>>>>>> Stashed changes
+        fun onItemClicked(data: Bluprint)
     }
 
 }

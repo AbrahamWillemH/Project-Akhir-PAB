@@ -9,31 +9,34 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
+import com.example.project_akhir_pab.databinding.FragmentLahanBinding
 import com.example.project_akhir_pab.databinding.FragmentPrasarana1Binding
+import com.example.project_akhir_pab.ui.lahan.LahanAdapter
+import com.l0122017.alvito.projectakhir.ui.lahan.Lahan
 
-class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
+class Prasarana1Fragment : Fragment(), LahanAdapter.OnItemClickCallback {
 
-    private lateinit var rvPrasarana1: RecyclerView
-    private lateinit var listPrasarana1: ArrayList<Prasarana>
-    private var _binding: FragmentPrasarana1Binding? = null
+    private lateinit var rvLahan: RecyclerView
+    private lateinit var listLahan: ArrayList<Lahan>
+    private var _binding: FragmentLahanBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPrasarana1Binding.inflate(inflater, container, false)
+        _binding = FragmentLahanBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvPrasarana1 = binding.recyclerViewPrasarana1
-        rvPrasarana1.setHasFixedSize(true)
+        rvLahan = binding.recyclerViewLokasiKepemilikanLahan
+        rvLahan.setHasFixedSize(true)
 
-        listPrasarana1 = ArrayList()
-        listPrasarana1.addAll(getListPrasarana1())
+        listLahan = ArrayList()
+        listLahan.addAll(getListLahan())
         showRecyclerList()
     }
 
@@ -42,31 +45,31 @@ class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
         _binding = null
     }
 
-    private fun getListPrasarana1(): List<Prasarana> {
-        val dataNama = resources.getStringArray(R.array.data_nama_prasarana)
-        val dataJenis = resources.getStringArray(R.array.data_jenis_prasarana)
-        val dataDeskripsi = resources.getStringArray(R.array.data_deskripsi_prasarana)
-        val dataJumlah = resources.getStringArray(R.array.data_jumlah_unit)
+    private fun getListLahan(): List<Lahan> {
+        val dataLokasi = resources.getStringArray(R.array.data_lokasi)
+        val dataStatus = resources.getStringArray(R.array.data_status)
+        val dataPenggunaan = resources.getStringArray(R.array.data_penggunaan)
+        val dataLuas = resources.getStringArray(R.array.data_luas)
 
-        val listPrasarana1 = ArrayList<Prasarana>()
-        for (i in dataNama.indices) {
-            val prasarana1 = Prasarana(dataNama[i], dataJenis[i], dataDeskripsi[i], dataJumlah[i])
-            listPrasarana1.add(prasarana1)
+        val listLahan = ArrayList<Lahan>()
+        for (i in dataLokasi.indices) {
+            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i])
+            listLahan.add(lahan)
         }
-        return listPrasarana1
+        return listLahan
     }
 
     private fun showRecyclerList() {
-        rvPrasarana1.layoutManager = LinearLayoutManager(requireContext())
-        val listPrasarana1Adapter = Prasarana1Adapter(listPrasarana1)
-        listPrasarana1Adapter.setOnItemClickCallback(this)
-        rvPrasarana1.adapter = listPrasarana1Adapter
+        rvLahan.layoutManager = LinearLayoutManager(requireContext())
+        val listLahanAdapter = LahanAdapter(listLahan)
+        listLahanAdapter.setOnItemClickCallback(this)
+        rvLahan.adapter = listLahanAdapter
     }
 
-    override fun onItemClicked(data: Prasarana) {
+    override fun onItemClicked(data: Lahan) {
         val bundle = Bundle().apply {
-            putParcelable("EXTRA_PRASARANA1", data)
+            putParcelable("EXTRA_LAHAN", data)
         }
-        findNavController().navigate(R.id.action_nav_prasarana1_to_detailPrasarana1Fragment, bundle)
+        findNavController().navigate(R.id.action_nav_lahan_to_detailLahanFragment, bundle)
     }
 }

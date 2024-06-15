@@ -8,14 +8,14 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/txtLokasiLahan"
+        android:id="@+id/txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/txtLuasLahan"
+        android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

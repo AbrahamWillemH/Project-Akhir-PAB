@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example-project-akhir-pab"
+    namespace = "com.example.project-akhir-pab"
     compileSdk = 34
 
     defaultConfig {

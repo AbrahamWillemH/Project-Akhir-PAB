@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/detailLahanFragment"
-        android:name="com.l0122017.alvito.projectakhir.ui.lahan.DetailLahanFragment"
+        android:name="com.example.project-akhir-pab.ui.lahan.DetailLahanFragment"
         android:label="@string/detail"
         tools:layout="@layout/fragment_detail_lahan" />
 </navigation>

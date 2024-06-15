@@ -67,6 +67,6 @@ class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
         val bundle = Bundle().apply {
             putParcelable("EXTRA_PRASARANA", data)
         }
-        findNavController().navigate(R.id.action_nav_prasarana1_to_detailPrasaranaFragment, bundle)
+        findNavController().navigate(R.id.fragment_detail_prasarana1, bundle)
     }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.l0122037.pab_android_projek_aset.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_bluprint"
+        android:name="com.l0122037.pab_android_projek_aset.ui.bluprint.BluprintFragment"
+        android:label="Bluprint"
+        tools:layout="@layout/fragment_bluprint" />
+    <fragment
+        android:id="@+id/nav_prasarana1"
+        android:name="com.l0122037.pab_android_projek_aset.ui.prasarana.Prasarana1Fragment"
+        android:label="Prasarana 1"
+        tools:layout="@layout/fragment_prasarana1" />
+    <fragment
+        android:id="@+id/nav_prasarana2"
+        android:name="com.l0122037.pab_android_projek_aset.ui.prasarana.Prasarana2Fragment"
+        android:label="Prasarana 2"
+        tools:layout="@layout/fragment_prasarana2" />
+
+    <fragment
+        android:id="@+id/nav_lahan"
+        android:name="com.l0122037.pab_android_projek_aset.ui.lahan.LahanFragment"
+        android:label="@string/menu_lahan"
+        tools:layout="@layout/fragment_lahan" >
+        <action
+            android:id="@+id/action_nav_lahan_to_detailLahanFragment"
+            app:destination="@id/detailLahanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailLahanFragment"
+        android:name="com.l0122017.alvito.projectakhir.ui.lahan.DetailLahanFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_detail_lahan" />
+</navigation>

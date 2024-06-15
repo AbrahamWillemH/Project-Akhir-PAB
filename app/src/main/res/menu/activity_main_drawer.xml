@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_bluprint"
+        android:icon="@drawable/ic_menu_bluprint"
+        android:title="Bluprint" />
+    <item
+        android:id="@+id/nav_prasarana1"
+        android:icon="@drawable/ic_menu_prasarana1"
+        android:title="Prasarana 1" />
+    <item
+        android:id="@+id/nav_prasarana2"
+        android:icon="@drawable/ic_menu_prasarana1"
+        android:title="Prasarana 2" />
+    <item
+        android:id="@+id/nav_lahan"
+        android:icon="@drawable/baseline_location_on_24"
+        android:title="@string/menu_lahan" />
+</menu>

@@ -14,7 +14,7 @@ class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
     private lateinit var onItemClickCallback: LahanAdapter.OnItemClickCallback
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrasaranaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item_prasarana1, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item, parent, false)
         return PrasaranaViewHolder(view)
     }
 
@@ -27,8 +27,8 @@ class Prasarana1Adapter(private val prasaranaList: List<Prasarana>) :
     override fun getItemCount(): Int = prasaranaList.size
 
     inner class PrasaranaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val txtNamaPrasarana: TextView = itemView.findViewById(R.id.txtNamaPrasarana)
-        val txtJenis: TextView = itemView.findViewById(R.id.txtJenis)
+        val txtNamaPrasarana: TextView = itemView.findViewById(R.id.txt1)
+        val txtJenis: TextView = itemView.findViewById(R.id.txt2)
     }
     fun setOnItemClickCallback(onItemClickCallback: LahanAdapter.OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback

@@ -13,7 +13,7 @@ class ListPrasarana2Adapter(private val listmotor : ArrayList<Prasarana2>) : Rec
     private lateinit var onItemClickMotorback: OnItemClickMotorback
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val imgFoto : ImageView = itemView.findViewById(R.id.img_item_motor_photo)
+        val imgFoto : ImageView = itemView.findViewById(R.id.img_item_motor_photo)
         val tvName : TextView = itemView.findViewById(R.id.tv_item_motor_name)
         val tvName2 : TextView = itemView.findViewById(R.id.tv_item_motor_harga)
         val tvdesc : TextView = itemView.findViewById(R.id.tv_item_motor_description)
@@ -28,6 +28,7 @@ class ListPrasarana2Adapter(private val listmotor : ArrayList<Prasarana2>) : Rec
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val informasi = listmotor[position]
+        holder.imgFoto.setImageResource(informasi.img)
         holder.tvName.text = informasi.name
         holder.tvName2.text = informasi.name2
         holder.tvdesc.text = informasi.desc

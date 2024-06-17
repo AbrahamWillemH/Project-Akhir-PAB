@@ -10,11 +10,11 @@
     <item
         android:id="@+id/nav_prasarana1"
         android:icon="@drawable/ic_menu_prasarana1"
-        android:title="Prasarana 1" />
+        android:title="Prasarana" />
     <item
         android:id="@+id/nav_prasarana2"
         android:icon="@drawable/ic_menu_prasarana1"
-        android:title="Prasarana 2" />
+        android:title="Prasarana lain" />
     <item
         android:id="@+id/nav_lahan"
         android:icon="@drawable/baseline_location_on_24"

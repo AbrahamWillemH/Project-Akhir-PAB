@@ -8,5 +8,6 @@ data class Prasarana2(
     val name : String,
     val name2 : String,
     val desc : String,
-//    val img : Int,
-) : Parcelable
+    val img : Int,
+) : Parcelable {
+}

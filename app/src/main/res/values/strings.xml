@@ -93,6 +93,65 @@
         <item>10</item>
     </string-array>
 
+<!--    Punya Billie-->
+    <string name="nama">Nama </string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="harga">Harga</string>
 
+    <style name="layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="layout.text1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+    <style name="layout.text2">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="layout.text3">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <string-array name="data_motor_nama">
+        <item>Suzuki V-Strom SX 250</item>
+        <item>Suzuki Avenis 125</item>
+        <item>Suzuki NEX II</item>
+        <item>Suzuki Smash FI</item>
+        <item>Suzuki Address</item>
+        <item>Suzuki NEX Crossover</item>
+        <item>Suzuki Satria F150</item>
+        <item>Suzuki GSX 150 Bandit</item>
+        <item>Suzuki GSX S150</item>
+        <item>Suzuki Gixxer SF 250</item>
+    </string-array>
+
+    <string-array name="data_motor_desc">
+        <item>Model: Street</item>
+        <item>Model: Street</item>
+        <item>Model: Scooter</item>
+        <item>Model: Scooter</item>
+        <item>Model: Scooter</item>
+        <item>Model: Scooter</item>
+        <item>Model: Scooter</item>
+        <item>Model: Street</item>
+        <item>Model: Street</item>
+        <item>Model: Sport</item>
+    </string-array>
+
+    <string-array name="data_motor_harga">
+        <item>Harga: Rp. 61.000.000,00</item>
+        <item>Harga: Rp. 30.180.000,00</item>
+        <item>Harga: Rp. 18.200.000,00</item>
+        <item>Harga: Rp. 16.850.000,00</item>
+        <item>Harga: Rp. 18.800.000,00</item>
+        <item>Harga: Rp. 19.000.000,00</item>
+        <item>Harga: Rp. 26.760.000,00</item>
+        <item>Harga: Rp. 27.300.000,00</item>
+        <item>Harga: Rp. 29.800.000,00</item>
+        <item>Harga: Rp. 49.300.000,00</item>
+    </string-array>
 
 </resources>

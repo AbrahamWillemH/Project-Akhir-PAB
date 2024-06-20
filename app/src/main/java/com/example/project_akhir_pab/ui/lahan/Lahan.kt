@@ -1,4 +1,4 @@
-package com.l0122017.alvito.projectakhir.ui.lahan
+package com.example.project_akhir_pab.ui.lahan
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

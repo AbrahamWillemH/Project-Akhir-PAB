@@ -27,40 +27,36 @@
     <string name="Penggunaan">...</string>
     <string name="luas">...</string>
     <string-array name="data_lokasi">
-        <item>Karanganyar</item>
-        <item>Solo</item>
-        <item>Surakarta</item>
-        <item>Surakarta</item>
-        <item>Surakarta</item>
-        <item>Surakarta</item>
-        <item>Surakarta</item>
+        <item>Fakultas Kedokteran</item>
+        <item>Fakultas Teknik</item>
+        <item>Fakultas Hukum</item>
+        <item>Fakultas Ekonomi dan Bisnis</item>
+        <item>Fakultas Matematika dan IPA</item>
+        <item>Fakultas Pertanian</item>
     </string-array>
     <string-array name="data_status">
-        <item>Owned</item>
-        <item>Rented</item>
-        <item>Government</item>
-        <item>Government</item>
-        <item>Government</item>
-        <item>Government</item>
-        <item>Government</item>
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
     </string-array>
     <string-array name="data_penggunaan">
-        <item>Agricultural</item>
-        <item>Residential</item>
-        <item>Commercial</item>
-        <item>Commercial</item>
-        <item>Commercial</item>
-        <item>Commercial</item>
-        <item>Commercial</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
     </string-array>
     <string-array name="data_luas">
-        <item>1000 m²</item>
-        <item>500 m²</item>
+        <item>2000 m²</item>
+        <item>1200 m²</item>
         <item>1500 m²</item>
+        <item>1800 m²</item>
         <item>1500 m²</item>
-        <item>1500 m²</item>
-        <item>1500 m²</item>
-        <item>1500 m²</item>
+        <item>1300 m²</item>
     </string-array>
 
     <!--  PRASARANA 1  -->

@@ -1,80 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/bg_main">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_dark_background"/>
+        android:background="@drawable/bg_detail_lahan"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="24sp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="@string/lokasi_lahan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32sp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/lokasi_lahan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtLokasiLahan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/lokasi"
-        android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/txtLokasiLahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/lokasi"
+            android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="24sp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="@string/status_kepemilikan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/status_kepemilikan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtStatusKepemilikan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Status"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/txtStatusKepemilikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Status"
+            android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="24sp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="@string/penggunaan_lahan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/penggunaan_lahan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtPenggunaanLahan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Penggunaan"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/txtPenggunaanLahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Penggunaan"
+            android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="24sp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="@string/luas_lahan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/luas_lahan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtLuasLahan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/luas"
-        android:layout_marginBottom="8dp"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/txtLuasLahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/luas"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

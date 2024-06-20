@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.project_akhir_pab.databinding.FragmentDetailLahanBinding
-import com.l0122017.alvito.projectakhir.ui.lahan.Lahan
 
 class DetailLahanFragment : Fragment() {
 

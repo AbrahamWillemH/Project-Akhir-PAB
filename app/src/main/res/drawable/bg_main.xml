@@ -1,0 +1,4 @@
+<!-- res/drawable/pattern_background.xml -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/motif_uns"
+    android:tileMode="repeat" />

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
 
-class BluprintAdapter(private val listUkm: ArrayList<Bluprint>) : RecyclerView.Adapter<BluprintAdapter.ListViewHolder>() {
+class BluprintAdapter(private val listBluprint: ArrayList<Bluprint>) : RecyclerView.Adapter<BluprintAdapter.ListViewHolder>() {
 
     private var onItemClickCallback: OnItemClickCallback? = null
 
@@ -17,31 +17,29 @@ class BluprintAdapter(private val listUkm: ArrayList<Bluprint>) : RecyclerView.A
     }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvLahan: TextView = itemView.findViewById(R.id.txt1)
-        val tvLuas: TextView = itemView.findViewById(R.id.txt2)
+        val namaBluprint: TextView = itemView.findViewById(R.id.txt1)
         val btnDetail: TextView = itemView.findViewById(R.id.btnDetail)
 
         init {
             itemView.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    onItemClickCallback?.onItemClicked(listUkm[position])
+                    onItemClickCallback?.onItemClicked(listBluprint[position])
                 }
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_list_item, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_list_bluprint, parent, false)
         return ListViewHolder(view)
     }
 
-    override fun getItemCount(): Int = listUkm.size
+    override fun getItemCount(): Int = listBluprint.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (lokasiLahan, statusKepemilikan, penggunaanLahan, luasLahan) = listUkm[position]
-        holder.tvLahan.text = lokasiLahan
-        holder.tvLuas.text = luasLahan
+        val (namaBluprint) = listBluprint[position]
+        holder.namaBluprint.text = namaBluprint
     }
 
     interface OnItemClickCallback {

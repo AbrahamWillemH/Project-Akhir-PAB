@@ -96,6 +96,7 @@
     <!--    Punya Billie-->
     <string name="nama">Nama </string>
     <string name="deskripsi">Deskripsi</string>
+    <string name="deskripsiBlup">Lorem ipsum dolor sit amet</string>
     <string name="harga">Harga</string>
 
     <style name="layout">
@@ -181,6 +182,33 @@
         <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
         <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
         <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
+    </string-array>
+
+    <!-- Bluprint -->
+    <string-array name="data_bluprint">
+        <item>Blok Judul</item>
+        <item>Denah Lokasi</item>
+        <item>Denah Lantai - Gedung Fakultas</item>
+        <item>Denah Lantai - Gedung Perpustakaan</item>
+        <item>Tampak</item>
+        <item>Potongan</item>
+        <item>Jadwal</item>
+        <item>Gambar Struktur</item>
+        <item>Rencana MEP</item>
+        <item>Spesifikasi</item>
+    </string-array>
+    
+    <string-array name="deskripsi_bluprint">
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
+        <item>Lorem ipsum dolor sit amet</item>
     </string-array>
 
 </resources>

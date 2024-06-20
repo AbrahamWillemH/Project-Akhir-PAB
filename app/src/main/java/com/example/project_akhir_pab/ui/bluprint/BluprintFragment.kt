@@ -1,48 +1,41 @@
 package com.example.project_akhir_pab.ui.bluprint
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
-import com.example.project_akhir_pab.databinding.FragmentLahanBinding
-import com.example.project_akhir_pab.ui.lahan.LahanAdapter
-import com.l0122017.alvito.projectakhir.ui.lahan.Lahan
+import com.example.project_akhir_pab.databinding.FragmentBluprintBinding
 
 
-class BluprintFragment : Fragment(), LahanAdapter.OnItemClickCallback {
 
-    private lateinit var rvLahan: RecyclerView
-    private lateinit var listLahan: ArrayList<Lahan>
-    private var _binding: FragmentLahanBinding? = null
+class BluprintFragment : Fragment(), BluprintAdapter.OnItemClickCallback {
+
+    private lateinit var rvBluprint: RecyclerView
+    private lateinit var listBluprint: ArrayList<Bluprint>
+    private var _binding: FragmentBluprintBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentLahanBinding.inflate(inflater, container, false)
+        _binding = FragmentBluprintBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvLahan = binding.recyclerViewLokasiKepemilikanLahan
-        rvLahan.setHasFixedSize(true)
+        rvBluprint = binding.recyclerViewBluprint
+        rvBluprint.setHasFixedSize(true)
 
-        listLahan = ArrayList()
-        listLahan.addAll(getListLahan())
+        listBluprint = ArrayList()
+        listBluprint.addAll(getListBluprint())
         showRecyclerList()
     }
 
@@ -51,31 +44,28 @@ class BluprintFragment : Fragment(), LahanAdapter.OnItemClickCallback {
         _binding = null
     }
 
-    private fun getListLahan(): List<Lahan> {
-        val dataLokasi = resources.getStringArray(R.array.data_lokasi)
-        val dataStatus = resources.getStringArray(R.array.data_status)
-        val dataPenggunaan = resources.getStringArray(R.array.data_penggunaan)
-        val dataLuas = resources.getStringArray(R.array.data_luas)
+    private fun getListBluprint(): List<Bluprint> {
+        val dataBluprint = resources.getStringArray(R.array.data_bluprint)
 
-        val listLahan = ArrayList<Lahan>()
-        for (i in dataLokasi.indices) {
-            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i])
-            listLahan.add(lahan)
+        val listBluprint = ArrayList<Bluprint>()
+        for (i in dataBluprint.indices) {
+            val bluprint = Bluprint(dataBluprint[i])
+            listBluprint.add(bluprint)
         }
-        return listLahan
+        return listBluprint
     }
 
     private fun showRecyclerList() {
-        rvLahan.layoutManager = LinearLayoutManager(requireContext())
-        val listLahanAdapter = LahanAdapter(listLahan)
-        listLahanAdapter.setOnItemClickCallback(this)
-        rvLahan.adapter = listLahanAdapter
+        rvBluprint.layoutManager = LinearLayoutManager(requireContext())
+        val listBluprintAdapter = BluprintAdapter(listBluprint)
+        listBluprintAdapter.setOnItemClickCallback(this)
+        rvBluprint.adapter = listBluprintAdapter
     }
 
-    override fun onItemClicked(data: Lahan) {
+    override fun onItemClicked(data: Bluprint) {
         val bundle = Bundle().apply {
-            putParcelable("EXTRA_LAHAN", data)
+            putParcelable("EXTRA_BLUPRINT", data)
         }
-        findNavController().navigate(R.id.action_nav_lahan_to_detailLahanFragment, bundle)
+        findNavController().navigate(R.id.action_nav_bluprint_to_detailBluprintFragment, bundle)
     }
 }

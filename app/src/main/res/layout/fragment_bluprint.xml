@@ -6,7 +6,7 @@
     tools:context="com.example.project_akhir_pab.ui.bluprint.BluprintFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewLokasiKepemilikanLahan"
+        android:id="@+id/recyclerViewBluprint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

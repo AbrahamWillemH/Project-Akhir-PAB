@@ -24,7 +24,7 @@ class GedungAdapter(private val gedungList: List<Gedung>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: GedungViewHolder, position: Int) {
         val gedung = gedungList[position]
-        holder.noTextView.text = gedung.no
+        holder.noTextView.text = gedung.year
         holder.descriptionTextView.text = gedung.description
         holder.jumlahTextView.text = gedung.total
         holder.luasTextView.text = gedung.luas

@@ -22,45 +22,54 @@
         android:textColor="@android:color/white"
         android:layout_marginBottom="16dp"/>
 
-    <TableLayout
-        android:id="@+id/table_layout"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:stretchColumns="1,2,3"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/white"
-        android:padding="8dp">
-        <!-- Headers row -->
-        <TableRow>
-            <TextView
-                android:text="No"
-                android:padding="8dp"
-                android:background="@android:color/darker_gray"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"/>
-            <TextView
-                android:text="Deskripsi"
-                android:padding="8dp"
-                android:background="@android:color/darker_gray"
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:gravity="center"/>
-            <TextView
-                android:text="Total"
-                android:padding="8dp"
-                android:background="@android:color/darker_gray"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"/>
-            <TextView
-                android:text="Luas"
-                android:padding="8dp"
-                android:background="@android:color/darker_gray"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"/>
-        </TableRow>
-    </TableLayout>
+        android:layout_height="wrap_content">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1,2,3"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <!-- Headers row -->
+                <TableRow>
+                    <TextView
+                        android:text="No"
+                        android:padding="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="Deskripsi"
+                        android:padding="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="Total"
+                        android:padding="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="Luas"
+                        android:padding="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </HorizontalScrollView>
 </LinearLayout>

@@ -49,50 +49,120 @@ class TabelDataGedungFragment : Fragment() {
         // Clear previous data
         tableLayout.removeViews(1, tableLayout.childCount - 1)
 
-        val gedungList = resources.getStringArray(R.array.gedung_data)
+        // Retrieve the data from strings.xml
+        val gedungData = resources.getStringArray(R.array.gedung_data)
             .map { it.split(",") }
-            .map { Gedung(it[0], it[1], it[2], it[3]) }
-            .filter { it.no == year }
+            .filter { it.size >= 5 && it[0] == year }
 
-        for (gedung in gedungList) {
-            val tableRow = TableRow(context)
+        // Group the data by section
+        val groupedData = gedungData.groupBy { it[1] }
 
-            val noTextView = TextView(context).apply {
-                text = gedung.no
+        // Variables to store the totals
+        var totalJumlah = 0
+        var totalLuas = 0.0
+
+        // Iterate over each section and add the header and its items to the table
+        groupedData.forEach { (section, items) ->
+            // Add section header row
+            val sectionRow = TableRow(context)
+            val sectionTextView = TextView(context).apply {
+                text = section
                 setPadding(8, 8, 8, 8)
-                gravity = Gravity.CENTER
-                layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
-            }
-
-            val descriptionTextView = TextView(context).apply {
-                text = gedung.description
-                setPadding(8, 8, 8, 8)
-                layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 3f)
-                setSingleLine(false)
-                setMaxLines(3)
+                layoutParams = TableRow.LayoutParams(
+                    TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.WRAP_CONTENT
+                )
                 gravity = Gravity.START
+                textSize = 16f
+                setTypeface(null, android.graphics.Typeface.BOLD)
             }
+            sectionRow.addView(sectionTextView)
+            tableLayout.addView(sectionRow)
 
-            val jumlahTextView = TextView(context).apply {
-                text = gedung.total
-                setPadding(8, 8, 8, 8)
-                layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
-                gravity = Gravity.CENTER
+            // Add items for this section
+            for ((index, item) in items.withIndex()) {
+                val tableRow = TableRow(context)
+
+                val noTextView = TextView(context).apply {
+                    text = (index + 1).toString()
+                    setPadding(8, 8, 8, 8)
+                    gravity = Gravity.CENTER
+                    layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                }
+
+                val descriptionTextView = TextView(context).apply {
+                    text = item[2]
+                    setPadding(8, 8, 8, 8)
+                    layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 3f)
+                    setSingleLine(false)
+                    setMaxLines(3)
+                    gravity = Gravity.START
+                }
+
+                val jumlahTextView = TextView(context).apply {
+                    text = item[3]
+                    setPadding(8, 8, 8, 8)
+                    layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                    gravity = Gravity.CENTER
+                }
+
+                val luasTextView = TextView(context).apply {
+                    text = item[4]
+                    setPadding(8, 8, 8, 8)
+                    layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+                    gravity = Gravity.CENTER
+                }
+
+                tableRow.addView(noTextView)
+                tableRow.addView(descriptionTextView)
+                tableRow.addView(jumlahTextView)
+                tableRow.addView(luasTextView)
+
+                tableLayout.addView(tableRow)
+
+                // Accumulate the totals
+                totalJumlah += item[3].toInt()
+                totalLuas += item[4].toDouble()
             }
-
-            val luasTextView = TextView(context).apply {
-                text = gedung.luas
-                setPadding(8, 8, 8, 8)
-                layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
-                gravity = Gravity.CENTER
-            }
-
-            tableRow.addView(noTextView)
-            tableRow.addView(descriptionTextView)
-            tableRow.addView(jumlahTextView)
-            tableRow.addView(luasTextView)
-
-            tableLayout.addView(tableRow)
         }
+
+        // Add Jumlah section at the bottom
+        val jumlahRow = TableRow(context)
+        val jumlahTextView = TextView(context).apply {
+            text = "Jumlah"
+            setPadding(8, 8, 8, 8)
+            layoutParams = TableRow.LayoutParams(
+                TableRow.LayoutParams.MATCH_PARENT,
+                TableRow.LayoutParams.WRAP_CONTENT
+            )
+            gravity = Gravity.START
+            textSize = 16f
+            setTypeface(null, android.graphics.Typeface.BOLD)
+        }
+        jumlahRow.addView(jumlahTextView)
+
+        val emptyTextView = TextView(context).apply {
+            setPadding(8, 8, 8, 8)
+            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 3f)
+        }
+        jumlahRow.addView(emptyTextView)
+
+        val totalJumlahTextView = TextView(context).apply {
+            text = totalJumlah.toString()
+            setPadding(8, 8, 8, 8)
+            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+            gravity = Gravity.START
+        }
+        jumlahRow.addView(totalJumlahTextView)
+
+        val totalLuasTextView = TextView(context).apply {
+            text = String.format("%.3f", totalLuas)
+            setPadding(8, 8, 8, 8)
+            layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)
+            gravity = Gravity.START
+        }
+        jumlahRow.addView(totalLuasTextView)
+
+        tableLayout.addView(jumlahRow)
     }
 }

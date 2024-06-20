@@ -100,15 +100,452 @@
     </string-array>
 
     <string-array name="gedung_data">
-        <item>2022,Bangunan Gedung Laboratorium Permanen,1,201</item>
-        <item>2022,Bangunan Gedung Pendidikan Permanen,1,1488</item>
-        <item>2022,Bangunan Gedung Pertemuan Permanen,1,160</item>
-        <item>2022,Bangunan Untuk Kandang,4,671</item>
-        <item>2022,Gedung Pos Jaga Permanen,1,48</item>
-        <item>2022,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,60</item>
-        <item>2022,Pagar Permanen,1,1198</item>
-        <item>2022,Rumah Negara Golongan I Tipe C Permanen,1,48</item>
-        <item>2022,Tugu/Tanda Batas Administrasi Kepemilikan,1,10</item>
-        <!-- Add more items here -->
+        <!--2022 SECTION-->
+        <!-- JATIKUWUNG section -->
+        <item>2022,JATIKUWUNG,Bangunan Gedung Laboratorium Permanen,1,201</item>
+        <item>2022,JATIKUWUNG,Bangunan Gedung Pendidikan Permanen,1,1488</item>
+        <item>2022,JATIKUWUNG,Bangunan Gedung Pertemuan Permanen,1,160</item>
+        <item>2022,JATIKUWUNG,Bangunan Untuk Kandang,4,671</item>
+        <item>2022,JATIKUWUNG,Gedung Pos Jaga Permanen,1,48</item>
+        <item>2022,JATIKUWUNG,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,60</item>
+        <item>2022,JATIKUWUNG,Pagar Permanen,1,1198</item>
+        <item>2022,JATIKUWUNG,Rumah Negara Golongan I Tipe C Permanen,1,48</item>
+        <item>2022,JATIKUWUNG,Tugu/Tanda Batas Administrasi Kepemilikan,1,10</item>
+
+        <!-- JUMANTONO section -->
+        <item>2022,JUMANTONO,Bangunan Gedung Laboratorium Permanen,1,49</item>
+        <item>2022,JUMANTONO,Bangunan Gedung Pendidikan Permanen,1,300</item>
+        <item>2022,JUMANTONO,Gedung Garasi/Pool Permanen,1,97</item>
+        <item>2022,JUMANTONO,Gedung Pos Jaga Permanen,1,66</item>
+
+        <!-- KEBUMEN section -->
+        <item>2022,KEBUMEN,Asrama Permanen,2,812</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Kantor Permanen,1,348</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Laboratorium Permanen,5,886</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Pendidikan Permanen,6,1140</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Perpustakaan Permanen,1,151</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Pertemuan Permanen,1,460</item>
+        <item>2022,KEBUMEN,Bangunan Gedung Tempat Ibadah Permanen,1,97</item>
+        <item>2022,KEBUMEN,Bangunan Tempat Parkir,1,380</item>
+        <item>2022,KEBUMEN,Pagar Permanen,2,911</item>
+        <item>2022,KEBUMEN,Rumah Negara Golongan I Tipe B Permanen,1,138</item>
+        <item>2022,KEBUMEN,Rumah Negara Golongan I Tipe C Permanen,1,138</item>
+        <item>2022,KEBUMEN,Rumah Negara Golongan II Tipe B Permanen,2,140</item>
+        <item>2022,KEBUMEN,Rumah Negara Golongan II Tipe C Permanen,1,98</item>
+
+        <!-- KENTINGAN section -->
+        <item>2022,KENTINGAN,Bangunan Parkir Terbuka Permanen,7,4713</item>
+        <item>2022,KENTINGAN,Bangunan Tempat Parkir,14,7817</item>
+        <item>2022,KENTINGAN,Bangunan Terbuka Lainnya,12,606.13</item>
+        <item>2022,KENTINGAN,Bangunan Untuk Kandang,1,30</item>
+        <item>2022,KENTINGAN,Gedung Garasi/Pool Permanen,3,1218.25</item>
+        <item>2022,KENTINGAN,Gedung Olah Raga Tetutup Permanen,1,2173</item>
+        <item>2022,KENTINGAN,Gedung Pertokoan/Koperasi/Pasar Permanen,12,2903.77</item>
+        <item>2022,KENTINGAN,Gedung Pos Jaga Permanen,10,359</item>
+        <item>2022,KENTINGAN,Gedung Pos Jaga Semi Permanen,2,11</item>
+        <item>2022,KENTINGAN,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,426.47</item>
+        <item>2022,KENTINGAN,Pagar Permanen,3,3631</item>
+        <item>2022,KENTINGAN,Taman Permanen,2,657</item>
+        <item>2022,KENTINGAN,Tugu Peringatan Lainnya,1,1</item>
+        <item>2022,KENTINGAN,Bangunan Fasilitas Umum Lainnya,2,212.5</item>
+        <item>2022,KENTINGAN,Bangunan Gazebo,1,50</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Instalasi Lainnya,2,93</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Kantor Lainnya,1,26.27</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Kantor Permanen,16,44963.42</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Laboratorium Permanen,28,43467.16</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Pendidikan Permanen,35,124390.91</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Perpustakaan Permanen,2,12465.552</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Pertemuan Permanen,1,2154.05</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Pertokoan/Koperasi/Pasar Lainnya,2,138</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Tempat Ibadah Permanen,11,8570.93</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Tempat Kerja Lainnya,1,48</item>
+        <item>2022,KENTINGAN,Bangunan Gedung Tempat Pendidikan Lainnya,13,9372.98</item>
+        <item>2022,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Cair,1,62</item>
+        <item>2022,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Permanen,1,135</item>
+        <item>2022,KENTINGAN,Bangunan Gudang Tertutup Permanen,18,2599.425</item>
+        <item>2022,KENTINGAN,Bangunan Gudang Tertutup Semi Permanen,1,76</item>
+        <item>2022,KENTINGAN,Bangunan klinik/Puskesmas,1,245</item>
+        <item>2022,KENTINGAN,Bangunan Lainnya,2,190.5</item>
+        <item>2022,KENTINGAN,Bangunan Olah Raga Terbuka Permanen,5,21014</item>
+
+        <!-- KLECO section -->
+        <item>2022,KLECO,Asrama Permanen,5,3908</item>
+        <item>2022,KLECO,Bangunan Gedung Laboratorium Permanen,1,1516</item>
+        <item>2022,KLECO,Bangunan Gedung Pendidikan Permanen,5,7696</item>
+        <item>2022,KLECO,Bangunan Gedung Tempat Ibadah Permanen,1,327</item>
+        <item>2022,KLECO,Bangunan Gedung Tempat Pendidikan Lainnya,1,132</item>
+        <item>2022,KLECO,Bangunan Olah Raga Terbuka Permanen,1,720</item>
+        <item>2022,KLECO,Bangunan Parkir Terbuka Permanen,1,177</item>
+        <item>2022,KLECO,Bangunan Tempat Parkir,1,133</item>
+        <item>2022,KLECO,Gedung Pos Jaga Permanen,1,20</item>
+        <item>2022,KLECO,Pagar Permanen,1,380</item>
+        <item>2022,KLECO,Rumah Negara Golongan I Tipe B Permanen,1,210</item>
+        <item>2022,KLECO,Rumah Negara Golongan II Tipe B Permanen,2,420</item>
+        <item>2022,KLECO,Tugu/Tanda Batas Administrasi Kepemilikan,1,187</item>
+
+        <!-- MANAHAN section -->
+        <item>2022,MANAHAN,Bangunan Gedung Pendidikan Permanen,1,5468.64</item>
+        <item>2022,MANAHAN,Bangunan Gedung Tempat Ibadah Permanen,1,176</item>
+        <item>2022,MANAHAN,Bangunan Olah Raga Terbuka Permanen,1,1209</item>
+        <item>2022,MANAHAN,Bangunan Tempat Parkir,1,78.4</item>
+        <item>2022,MANAHAN,Gedung Olahraga Tertutup Permanen,1,768</item>
+        <item>2022,MANAHAN,Gedung Pertokan/Koperasi/Pasar Permanen,1,48.4</item>
+        <item>2022,MANAHAN,Gedung Pos Jaga Permanen,1,4</item>
+        <item>2022,MANAHAN,Pagar Permanen,1,116</item>
+
+        <!-- MESEN section -->
+        <item>2022,MESEN,Bangunan Gedung Pendidikan Permanen,4,2306.5</item>
+        <item>2022,MESEN,Gedung Garasi/Pool Permanen,1,182.4</item>
+
+        <!-- NGORESAN section -->
+        <item>2022,NGORESAN,Asrama Permanen,3,2306,14777.303</item>
+        <item>2022,NGORESAN,Bangunan Gedung Kantor Permanen,1,438.7</item>
+        <item>2022,NGORESAN,Bangunan Gedung Pendidikan Permanen,6,1605.89</item>
+        <item>2022,NGORESAN,Bangunan Gedung Tempat Ibadah Permanen,1,137.485</item>
+        <item>2022,NGORESAN,Bangunan Olah Raga Terbuka Permanen,1,371.25</item>
+        <item>2022,NGORESAN,Bangunan Tempat Parkir,2,210</item>
+        <item>2022,NGORESAN,Gedung Pos Jaga Permanen,1,20.46</item>
+        <item>2022,NGORESAN,Rumah Negara Golongan I Tipe C Permanen,1,75.96</item>
+        <item>2022,NGORESAN,Rumah Negara Golongan II Tipe D Permanen,1,34.44</item>
+        <item>2022,NGORESAN,Tugu/Tanda Batas Administrasi Kepemilikan,3,389</item>
+
+        <!-- PABELAN section -->
+        <item>2022,PABELAN,Bangunan Gedung Kantor Permanen,1,520</item>
+        <item>2022,PABELAN,Bangunan Gedung Laboratorium Permanen,7,2254.88</item>
+        <item>2022,PABELAN,Bangunan Gedung Pendidikan Permanen,3,5795.358</item>
+        <item>2022,PABELAN,Bangunan Gedung Perpustakaan Permanen,1,160</item>
+        <item>2022,PABELAN,Bangunan Gedung Pertokoan/Koperasi/Pasar Lainnya,1,126</item>
+        <item>2022,PABELAN,Bangunan Gedung Tempat Ibadah Permanen,1,146.4</item>
+        <item>2022,PABELAN,Bangunan klinik/Puskesmas,1,94</item>
+        <item>2022,PABELAN,Bangunan Lainnya,1,5455</item>
+        <item>2022,PABELAN,Bangunan Rumah Sakit Umum,1,20234</item>
+        <item>2022,PABELAN,Bangunan Tempat Parkir,1,208.62</item>
+        <item>2022,PABELAN,Gedung Pos Jaga Permanen,1,12.25</item>
+        <item>2022,PABELAN,Pagar Permanen,2,426.6</item>
+        <item>2022,PABELAN,Tugu/Tanda Batas Administrasi Kepemilikan,1,200</item>
+
+        <!-- PALUR section -->
+        <item>2022,PALUR,Pagar Semi Permanen,1,60</item>
+        <item>2022,PALUR,Tugu/Tanda Batas Administrasi Kepemilikan,1,2</item>
+
+        <!-- PURWOSARI section -->
+        <item>2022,PURWOSARI,Bangunan Gedung Kantor Permanen,1,3271</item>
+        <item>2022,PURWOSARI,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,161.85</item>
+
+        <!-- PURWOTOMO section -->
+        <item>2022,PURWOTOMO,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,4,722.235</item>
+
+        <!-- TIRTOMOYO section -->
+        <item>2022,TIRTOMOYO,Bangunan Gedung Pendidikan Permanen,1,3117</item>
+        <item>2022,TIRTOMOYO,Bangunan Gedung Tempat Pendidikan Lainnya,1,207.755</item>
+        <item>2022,TIRTOMOYO,Bangunan Lainnya,1,112.36</item>
+        <item>2022,TIRTOMOYO,Bangunan Tempat Parkir,1,90.8</item>
+        <item>2022,TIRTOMOYO,Gedung Pos Jaga Permanen,1,30</item>
+        <item>2022,TIRTOMOYO,Tugu/Tanda Batas Administrasi Kepemilikan,1,95.5</item>
+
+        <!--2023 SECTION-->
+        <!-- JATIKUWUNG section -->
+        <item>2023,JATIKUWUNG,Bangunan Gedung Laboratorium Permanen,1,201</item>
+        <item>2023,JATIKUWUNG,Bangunan Gedung Pendidikan Permanen,1,1488</item>
+        <item>2023,JATIKUWUNG,Bangunan Gedung Pertemuan Permanen,1,160</item>
+        <item>2023,JATIKUWUNG,Bangunan Untuk Kandang,4,671</item>
+        <item>2023,JATIKUWUNG,Gedung Pos Jaga Permanen,1,48</item>
+        <item>2023,JATIKUWUNG,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,60</item>
+        <item>2023,JATIKUWUNG,Pagar Permanen,1,1198</item>
+        <item>2023,JATIKUWUNG,Rumah Negara Golongan I Tipe C Permanen,1,48</item>
+        <item>2023,JATIKUWUNG,Tugu/Tanda Batas Administrasi Kepemilikan,1,10</item>
+
+        <!-- JUMANTOΝΟ section -->
+        <item>2023,JUMANTOΝΟ,Bangunan Gedung Laboratorium Permanen,3,549</item>
+        <item>2023,JUMANTOΝΟ,Bangunan Gedung Pendidikan Permanen,1,300</item>
+        <item>2023,JUMANTOΝΟ,Gedung Garasi/Pool Permanen,1,97</item>
+        <item>2023,JUMANTOΝΟ,Gedung Pos Jaga Permanen,1,66</item>
+        <item>2023,JUMANTOΝΟ,Pagar Permanen,2,306</item>
+
+        <!-- KEBUMEN section -->
+        <item>2023,KEBUMEN,Asrama Permanen,2,812</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Kantor Permanen,1,348</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Laboratorium Permanen,5,886</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Pendidikan Permanen,6,1140</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Perpustakaan Permanen,1,151</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Pertemuan Permanen,1,460</item>
+        <item>2023,KEBUMEN,Bangunan Gedung Tempat Ibadah Permanen,1,97</item>
+        <item>2023,KEBUMEN,Bangunan Tempat Parkir,1,380</item>
+        <item>2023,KEBUMEN,Pagar Permanen,2,911</item>
+        <item>2023,KEBUMEN,Rumah Negara Golongan I Tipe B Permanen,1,138</item>
+        <item>2023,KEBUMEN,Rumah Negara Golongan I Tipe C Permanen,1,138</item>
+        <item>2023,KEBUMEN,Rumah Negara Golongan II Tipe B Permanen,2,140</item>
+        <item>2023,KEBUMEN,Rumah Negara Golongan II Tipe C Permanen,1,98</item>
+
+        <!-- KENTINGAN section -->
+        <item>2023,KENTINGAN,Bangunan Gedung Perpustakaan Permanen,2,12465.552</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Pertemuan Permanen,3,6371.89</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Pertokoan/Koperasi/Pasar Lainnya,2,138</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Tempat Ibadah Permanen,11,8570.93</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Tempat Kerja Lainnya,1,48</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Tempat Pendidikan Lainnya,13,9372.98</item>
+        <item>2023,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Cair,1,62</item>
+        <item>2023,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Permanen,1,135</item>
+        <item>2023,KENTINGAN,Bangunan Gudang Tertutup Permanen,18,2599.425</item>
+        <item>2023,KENTINGAN,Bangunan Gudang Tertutup Semi Permanen,1,76</item>
+        <item>2023,KENTINGAN,Bangunan klinik/Puskesmas,1,245</item>
+        <item>2023,KENTINGAN,Bangunan Lainnya,2,190.5</item>
+        <item>2023,KENTINGAN,Bangunan Olah Raga Terbuka Permanen,5,21014</item>
+        <item>2023,KENTINGAN,Bangunan Parkir Terbuka Permanen,7,4713</item>
+        <item>2023,KENTINGAN,Bangunan Tempat Parkir,13,7649</item>
+        <item>2023,KENTINGAN,Bangunan Terbuka Lainnya,12,606.13</item>
+        <item>2023,KENTINGAN,Bangunan Untuk Kandang,1,30</item>
+        <item>2023,KENTINGAN,Gedung Garasi/Pool Permanen,3,1218.25</item>
+        <item>2023,KENTINGAN,Gedung Olah Raga Tetutup Permanen,1,2173</item>
+        <item>2023,KENTINGAN,Gedung Pertokoan/Koperasi/Pasar Permanen,12,2903.77</item>
+        <item>2023,KENTINGAN,Gedung Pos Jaga Permanen,10,359</item>
+        <item>2023,KENTINGAN,Gedung Pos Jaga Semi Permanen,2,11</item>
+        <item>2023,KENTINGAN,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,426.47</item>
+        <item>2023,KENTINGAN,Pagar Permanen,3,3631</item>
+        <item>2023,KENTINGAN,Taman Permanen,2,657</item>
+        <item>2023,KENTINGAN,Tugu Peringatan Lainnya,1,1</item>
+        <item>2023,KENTINGAN,Bangunan Kantin,1,352</item>
+        <item>2023,KENTINGAN,Tugu/Tanda Batas Lainnya,1,74</item>
+        <item>2023,KENTINGAN,Bangunan Fasilitas Umum Lainnya,2,212.5</item>
+        <item>2023,KENTINGAN,Bangunan Gazebo,1,50</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Instalasi Lainnya,2,93</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Kantor Lainnya,1,26.27</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Kantor Permanen,18,50459.42</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Laboratorium Permanen,28,43467.16</item>
+        <item>2023,KENTINGAN,Bangunan Gedung Pendidikan Permanen,33,120173.07</item>
+
+        <!-- KHDTK BROMO section -->
+        <item>2023,KHDTK BROMO,Bangunan Untuk Kandang,1,676.9</item>
+
+        <!-- KLECO section -->
+        <item>2023,KLECO,Asrama Permanen,5,3908</item>
+        <item>2023,KLECO,Bangunan Gedung Laboratorium Permanen,1,1516</item>
+        <item>2023,KLECO,Bangunan Gedung Pendidikan Permanen,3,7373</item>
+        <item>2023,KLECO,Bangunan Gedung Tempat Ibadah Permanen,1,327</item>
+        <item>2023,KLECO,Bangunan Gedung Tempat Pendidikan Lainnya,1,132</item>
+        <item>2023,KLECO,Bangunan Olah Raga Terbuka Permanen,1,720</item>
+        <item>2023,KLECO,Bangunan Parkir Terbuka Permanen,1,177</item>
+        <item>2023,KLECO,Bangunan Tempat Parkir,1,133</item>
+        <item>2023,KLECO,Gedung Pos Jaga Permanen,1,20</item>
+        <item>2023,KLECO,Pagar Permanen,1,380</item>
+        <item>2023,KLECO,Rumah Negara Golongan I Tipe B Permanen,1,210</item>
+        <item>2023,KLECO,Rumah Negara Golongan II Tipe B Permanen,2,420</item>
+        <item>2023,KLECO,Tugu/Tanda Batas Administrasi Kepemilikan,1,187</item>
+        <item>2023,KLECO,Bangunan Gedung Pertemuan Permanen,2,323</item>
+
+        <!-- MEDIUN section -->
+        <item>2023,MADIUN,Bangunan Gedung Pendidikan Permanen,2,1774.8</item>
+        <item>2023,MADIUN,Bangunan Tempat Parkir,1,168</item>
+        <item>2023,MADIUN,Pagar Permanen,2,240</item>
+
+        <!-- MANAHAN section -->
+        <item>2023,MANAHAN,Bangunan Gedung Pendidikan Permanen,1,5468,64</item>
+        <item>2023,MANAHAN,Bangunan Olah Raga Terbuka Permanen,1,1209</item>
+        <item>2023,MANAHAN,Gedung Olahraga Tertutup Permanen,1,768</item>
+        <item>2023,MANAHAN,Gedung Pertokan/Koperasi/Pasar Permanen,1,48.4</item>
+        <item>2023,MANAHAN,Gedung Pos Jaga Permanen,1,4</item>
+        <item>2023,MANAHAN,Pagar Permanen,1,116</item>
+
+        <!-- MESEN section -->
+        <item>2023,MESEN,Bangunan Gedung Pendidikan Permanen,3,1707,5</item>
+        <item>2023,MESEN,Gedung Garasi/Pool Permanen,1,182,4</item>
+        <item>2023,MESEN,Bangunan Gedung Pertemuan Permanen,1,599</item>
+
+        <!-- NGORESAN section -->
+        <item>2023,NGORESAN,Asrama Permanen,3,14777.303</item>
+        <item>2023,NGORESAN,Bangunan Gedung Kantor Permanen,1,438.7</item>
+        <item>2023,NGORESAN,Bangunan Gedung Pendidikan Permanen,6,1605.89</item>
+        <item>2023,NGORESAN,Bangunan Gedung Tempat Ibadah Permanen,1,137.485</item>
+        <item>2023,NGORESAN,Bangunan Olah Raga Terbuka Permanen,1,371.25</item>
+        <item>2023,NGORESAN,Bangunan Tempat Parkir,2,210</item>
+        <item>2023,NGORESAN,Gedung Pos Jaga Permanen,1,20.46</item>
+        <item>2023,NGORESAN,Rumah Negara Golongan I Tipe C Permanen,1,75.96</item>
+        <item>2023,NGORESAN,Rumah Negara Golongan II Tipe D Permanen,1,34.44</item>
+        <item>2023,NGORESAN,Tugu/Tanda Batas Administrasi Kepemilikan,3,389</item>
+
+        <!-- PABELAN section -->
+        <item>2023,PABELAN,Bangunan Gedung Kantor Permanen,1,520</item>
+        <item>2023,PABELAN,Bangunan Gedung Laboratorium Permanen,7,2254.88</item>
+        <item>2023,PABELAN,Bangunan Gedung Pendidikan Permanen,3,5795.358</item>
+        <item>2023,PABELAN,Bangunan Gedung Perpustakaan Permanen,1,160</item>
+        <item>2023,PABELAN,Bangunan Gedung Pertokoan/Koperasi/Pasar Lainnya,1,126</item>
+        <item>2023,PABELAN,Bangunan Gedung Tempat Ibadah Permanen,1,146.4</item>
+        <item>2023,PABELAN,Bangunan klinik/Puskesmas,1,94</item>
+        <item>2023,PABELAN,Bangunan Lainnya,1,5455</item>
+        <item>2023,PABELAN,Bangunan Rumah Sakit Umum,1,20234</item>
+        <item>2023,PABELAN,Bangunan Tempat Parkir,1,208.62</item>
+        <item>2023,PABELAN,Gedung Pos Jaga Permanen,1,12.25</item>
+        <item>2023,PABELAN,Pagar Permanen,2,426.6</item>
+        <item>2023,PABELAN,Tugu/Tanda Batas Administrasi Kepemilikan,1,200</item>
+        <item>2023,PABELAN,Bangunan Gudang Tertutup Permanen,1,225</item>
+
+        <!-- PALUR section -->
+        <item>2023,PALUR,Pagar Semi Permanen,1,60</item>
+        <item>2023,PALUR,Tugu/Tanda Batas Administrasi Kepemilikan,1,2</item>
+
+        <!-- PURWOSARI section -->
+        <item>2023,PURWOSARI,Bangunan Gedung Kantor Permanen,1,3271</item>
+        <item>2023,PURWOSARI,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,161.85</item>
+
+        <!-- PURWOTOMO section -->
+        <item>2023,PURWOTOMO,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,4,722.235</item>
+
+        <!-- TIRTOMOYO section -->
+        <item>2023,TIRTOMOYO,Bangunan Gedung Pendidikan Permanen,1,1458.75</item>
+        <item>2023,TIRTOMOYO,Bangunan Gedung Tempat Pendidikan Lainnya,1,207.755</item>
+        <item>2023,TIRTOMOYO,Tugu/Tanda Batas Administrasi Kepemilikan,1,95.5</item>
+
+        <!--2024 SECTION-->
+        <!-- JATIKUWUNG section -->
+        <item>2024,JATIKUWUNG,Bangunan Gedung Laboratorium Permanen,1,201</item>
+        <item>2024,JATIKUWUNG,Bangunan Gedung Pendidikan Permanen,1,1488</item>
+        <item>2024,JATIKUWUNG,Bangunan Gedung Pertemuan Permanen,1,160</item>
+        <item>2024,JATIKUWUNG,Bangunan Untuk Kandang,4,671</item>
+        <item>2024,JATIKUWUNG,Gedung Pos Jaga Permanen,1,48</item>
+        <item>2024,JATIKUWUNG,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,60</item>
+        <item>2024,JATIKUWUNG,Pagar Permanen,1,1198</item>
+        <item>2024,JATIKUWUNG,Rumah Negara Golongan I Tipe C Permanen,1,48</item>
+        <item>2024,JATIKUWUNG,Tugu/Tanda Batas Administrasi Kepemilikan,1,10</item>
+
+        <!-- JUMANTONO section -->
+        <item>2024,JUMANTONO,Bangunan Gedung Laboratorium Permanen,3,549</item>
+        <item>2024,JUMANTONO,Bangunan Gedung Pendidikan Permanen,1,300</item>
+        <item>2024,JUMANTONO,Gedung Garasi/Pool Permanen,1,97</item>
+        <item>2024,JUMANTONO,Gedung Pos Jaga Permanen,1,66</item>
+        <item>2024,JUMANTONO,Pagar Permanen,2,306</item>
+
+        <!-- KEBUMEN section -->
+        <item>2024,KEBUMEN,Asrama Permanen,2,812</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Kantor Permanen,1,348</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Laboratorium Permanen,5,886</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Pendidikan Permanen,6,1140</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Perpustakaan Permanen,1,151</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Pertemuan Permanen,1,460</item>
+        <item>2024,KEBUMEN,Bangunan Gedung Tempat Ibadah Permanen,1,97</item>
+        <item>2024,KEBUMEN,Bangunan Tempat Parkir,1,380</item>
+        <item>2024,KEBUMEN,Pagar Permanen,2,911</item>
+        <item>2024,KEBUMEN,Rumah Negara Golongan I Tipe B Permanen,1,138</item>
+        <item>2024,KEBUMEN,Rumah Negara Golongan I Tipe C Permanen,1,138</item>
+        <item>2024,KEBUMEN,Rumah Negara Golongan II Tipe B Permanen,2,140</item>
+        <item>2024,KEBUMEN,Rumah Negara Golongan II Tipe C Permanen,1,98</item>
+
+        <!-- KENTINGAN section -->
+        <item>2024,KENTINGAN,Bangunan Terbuka Lainnya,11,522.13</item>
+        <item>2024,KENTINGAN,Bangunan Untuk Kandang,1,30</item>
+        <item>2024,KENTINGAN,Gedung Garasi/Pool Permanen,3,1218.25</item>
+        <item>2024,KENTINGAN,Gedung Olah Raga Tetutup Permanen,1,2173</item>
+        <item>2024,KENTINGAN,Gedung Pertokoan/Koperasi/Pasar Permanen,3,1768</item>
+        <item>2024,KENTINGAN,Gedung Pos Jaga Permanen,10,359</item>
+        <item>2024,KENTINGAN,Gedung Pos Jaga Semi Permanen,2,11</item>
+        <item>2024,KENTINGAN,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,426.47</item>
+        <item>2024,KENTINGAN,Pagar Permanen,3,3631</item>
+        <item>2024,KENTINGAN,Taman Permanen,2,657</item>
+        <item>2024,KENTINGAN,Tugu Peringatan Lainnya,1,1</item>
+        <item>2024,KENTINGAN,Tugu/Tanda Batas Lainnya,1,74</item>
+        <item>2024,KENTINGAN,Bangunan Fasilitas Umum Lainnya,2,405</item>
+        <item>2024,KENTINGAN,Bangunan Gazebo,1,50</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Instalasi Lainnya,2,93</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Kantor Lainnya,1,26.27</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Kantor Permanen,17,49490.42</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Laboratorium Permanen,28,43467.16</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Pendidikan Permanen,33,120173.07</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Perpustakaan Permanen,2,12465.552</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Pertemuan Permanen,3,6371.89</item>
+        <item>2024,KENTINGAN,Properti Investasi Gedung Bangunan,15,2791.27</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Tempat Ibadah Permanen,11,8570.93</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Tempat Kerja Lainnya,1,48</item>
+        <item>2024,KENTINGAN,Bangunan Gedung Tempat Pendidikan Lainnya,13,9372.98</item>
+        <item>2024,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Cair,1,62</item>
+        <item>2024,KENTINGAN,Bangunan Gudang Penyimpanan Limbah Radioaktif Permanen,1,135</item>
+        <item>2024,KENTINGAN,Bangunan Gudang Tertutup Permanen,18,2599.425</item>
+        <item>2024,KENTINGAN,Bangunan Gudang Tertutup Semi Permanen,1,76</item>
+        <item>2024,KENTINGAN,Bangunan klinik/Puskesmas,1,245</item>
+        <item>2024,KENTINGAN,Bangunan Lainnya,2,190.5</item>
+        <item>2024,KENTINGAN,Bangunan Olah Raga Terbuka Permanen,5,21014</item>
+        <item>2024,KENTINGAN,Bangunan Parkir Terbuka Permanen,7,4713</item>
+        <item>2024,KENTINGAN,Bangunan Tempat Parkir,13,7649</item>
+
+        <!-- KHDTK BROMO section -->
+        <item>2024,KHDTK BROMO,Bangunan Untuk Kandang,1,676.9</item>
+
+        <!-- KLECO section -->
+        <item>2024,KLECO,Properti Investasi Gedung Bangunan,5,3908</item>
+        <item>2024,KLECO,Bangunan Gedung Laboratorium Permanen,1,1516</item>
+        <item>2024,KLECO,Bangunan Gedung Pendidikan Permanen,3,7373</item>
+        <item>2024,KLECO,Bangunan Gedung Pertemuan Permanen,2,323</item>
+        <item>2024,KLECO,Bangunan Gedung Tempat Ibadah Permanen,1,327</item>
+        <item>2024,KLECO,Bangunan Gedung Tempat Pendidikan Lainnya,1,132</item>
+        <item>2024,KLECO,Bangunan Olah Raga Terbuka Permanen,1,720</item>
+        <item>2024,KLECO,Bangunan Parkir Terbuka Permanen,1,177</item>
+        <item>2024,KLECO,Bangunan Tempat Parkir,1,133</item>
+        <item>2024,KLECO,Gedung Pos Jaga Permanen,1,20</item>
+        <item>2024,KLECO,Pagar Permanen,1,380</item>
+        <item>2024,KLECO,Rumah Negara Golongan I Tipe B Permanen,1,210</item>
+        <item>2024,KLECO,Rumah Negara Golongan II Tipe B Permanen,2,420</item>
+        <item>2024,KLECO,Tugu/Tanda Batas Administrasi Kepemilikan,1,187</item>
+
+        <!-- MADIUN section -->
+        <item>2024,MADIUN,Bangunan Gedung Pendidikan Permanen,2,1774.8</item>
+        <item>2024,MADIUN,Bangunan Tempat Parkir,1,168</item>
+        <item>2024,MADIUN,Pagar Permanen,2,240</item>
+
+        <!-- MANAHAN section -->
+        <item>2024,MANAHAN,Bangunan Gedung Pendidikan Permanen,1,5468.64</item>
+        <item>2024,MANAHAN,Bangunan Olah Raga Terbuka Permanen,1,1209</item>
+        <item>2024,MANAHAN,Gedung Olah Raga Tertutup Permanen,1,768</item>
+        <item>2024,MANAHAN,Gedung Pertokoan/Koperasi/Pasar Permanen,1,48.4</item>
+        <item>2024,MANAHAN,Gedung Pos Jaga Permanen,1,4</item>
+        <item>2024,MANAHAN,Pagar Permanen,1,116</item>
+        <item>2024,MANAHAN,Bangunan Gedung Tempat Ibadah Permanen,1,91</item>
+
+        <!-- MESEN section -->
+        <item>2024,MESEN,Bangunan Gedung Pendidikan Permanen,3,1707.5</item>
+        <item>2024,MESEN,Bangunan Gedung Pertemuan Permanen,1,599</item>
+        <item>2024,MESEN,Gedung Garasi/Pool Permanen,1,182.4</item>
+
+        <!-- NGORESAN section -->
+        <item>2024,NGORESAN,Properti Investasi Gedung Bangunan,3,14777.303</item>
+        <item>2024,NGORESAN,Bangunan Gedung Kantor Permanen,1,438.7</item>
+        <item>2024,NGORESAN,Bangunan Gedung Pendidikan Permanen,6,1605.89</item>
+        <item>2024,NGORESAN,Bangunan Gedung Tempat Ibadah Permanen,1,137.485</item>
+        <item>2024,NGORESAN,Bangunan Olah Raga Terbuka Permanen,1,371.25</item>
+        <item>2024,NGORESAN,Bangunan Tempat Parkir,2,210</item>
+        <item>2024,NGORESAN,Gedung Pos Jaga Permanen,1,20.46</item>
+        <item>2024,NGORESAN,Rumah Negara Golongan I Tipe C Permanen,1,75.96</item>
+        <item>2024,NGORESAN,Rumah Negara Golongan II Tipe D Permanen,1,34.44</item>
+        <item>2024,NGORESAN,Tugu/Tanda Batas Administrasi Kepemilikan,3,389</item>
+
+        <!-- PABELAN section -->
+        <item>2024,PABELAN,Bangunan Gedung Kantor Permanen,1,520</item>
+        <item>2024,PABELAN,Bangunan Gudang Tertutup Permanen,1,225</item>
+        <item>2024,PABELAN,Bangunan Gedung Laboratorium Permanen,7,2254.88</item>
+        <item>2024,PABELAN,Bangunan Gedung Pendidikan Permanen,3,5795.358</item>
+        <item>2024,PABELAN,Bangunan Gedung Perpustakaan Permanen,1,160</item>
+        <item>2024,PABELAN,Properti Investasi Gedung Bangunan,2,220</item>
+        <item>2024,PABELAN,Bangunan Gedung Tempat Ibadah Permanen,1,146.4</item>
+        <item>2024,PABELAN,Bangunan Lainnya,1,5455</item>
+        <item>2024,PABELAN,Bangunan Rumah Sakit Umum,1,20234</item>
+        <item>2024,PABELAN,Bangunan Tempat Parkir,1,208.62</item>
+        <item>2024,PABELAN,Gedung Pos Jaga Permanen,1,12.25</item>
+        <item>2024,PABELAN,Pagar Permanen,2,426.6</item>
+        <item>2024,PABELAN,Tugu/Tanda Batas Administrasi Kepemilikan,1,200</item>
+
+        <!-- PALUR section -->
+        <item>2024,PALUR,Pagar Semi Permanen,1,60</item>
+        <item>2024,PALUR,Tugu/Tanda Batas Administrasi Kepemilikan,1,2</item>
+
+        <!-- PURWOSARI section -->
+        <item>2024,PURWOSARI,Bangunan Gedung Kantor Permanen,1,3271</item>
+        <item>2024,PURWOSARI,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,1,161.85</item>
+
+        <!-- PURWOTOMO section -->
+        <item>2024,PURWOTOMO,Mess/Wisma/Bungalow/Tempat Peristirahatan Permanen,4,722.235</item>
+
+        <!-- TIRTOMOYO section -->
+        <item>2024,TIRTOMOYO,Bangunan Gedung Pendidikan Permanen,4,1458.75</item>
+        <item>2024,TIRTOMOYO,Bangunan Gedung Tempat Pendidikan Lainnya,1,207.755</item>
+        <item>2024,TIRTOMOYO,Tugu/Tanda Batas Administrasi Kepemilikan,1,95.5</item>
+
+
     </string-array>
 </resources>

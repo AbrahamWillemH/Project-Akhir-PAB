@@ -48,10 +48,12 @@ class LahanFragment : Fragment(), LahanAdapter.OnItemClickCallback {
         val dataStatus = resources.getStringArray(R.array.data_status)
         val dataPenggunaan = resources.getStringArray(R.array.data_penggunaan)
         val dataLuas = resources.getStringArray(R.array.data_luas)
+        val dataLatitude = resources.getStringArray(R.array.data_latitude).map { it.toDouble() }
+        val dataLongitude = resources.getStringArray(R.array.data_longitude).map { it.toDouble() }
 
         val listLahan = ArrayList<Lahan>()
         for (i in dataLokasi.indices) {
-            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i])
+            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i], dataLatitude[i], dataLongitude[i])
             listLahan.add(lahan)
         }
         return listLahan

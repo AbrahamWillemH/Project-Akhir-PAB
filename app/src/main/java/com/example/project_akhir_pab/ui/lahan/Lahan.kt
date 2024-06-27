@@ -8,5 +8,7 @@ data class Lahan(
     val lokasiLahan: String,
     val statusKepemilikan: String,
     val penggunaanLahan: String,
-    val luasLahan: String
+    val luasLahan: String,
+    val latitude: Double,
+    val longitude: Double
 ) : Parcelable

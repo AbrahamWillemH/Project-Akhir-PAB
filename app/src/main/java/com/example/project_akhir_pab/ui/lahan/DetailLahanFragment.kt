@@ -52,7 +52,7 @@ class DetailLahanFragment : Fragment() {
 
             // Atur posisi peta awal
             val mapController = map.controller
-            mapController.setZoom(15.0)
+            mapController.setZoom(18.0)
             val startPoint = GeoPoint(lahan.latitude, lahan.longitude)
             mapController.setCenter(startPoint)
 

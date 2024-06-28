@@ -34,6 +34,8 @@
         <item>-7.55922378166025</item>
         <item>-7.561021605767737</item>
         <item>-7.558323232399019</item>
+        <item>-7.557012481473823</item>
+        <item>-7.5558926943535125</item>
     </string-array>
     <string-array name="data_longitude">
         <item>110.85970918041882</item>
@@ -43,17 +45,23 @@
         <item>110.85835515303859</item>
         <item>110.8583155033066</item>
         <item>110.85797631749494</item>
+        <item>110.8530787853729</item>
+        <item>110.85680362739758</item>
     </string-array>
     <string-array name="data_lokasi">
         <item>Fakultas Kedokteran</item>
         <item>Fakultas Teknik</item>
         <item>Fakultas Hukum</item>
         <item>Fakultas Ekonomi dan Bisnis</item>
-        <item>Fakultas Matematika dan IPA</item>
+        <item>Fakultas MIPA</item>
         <item>Fakultas Pertanian</item>
         <item>Fakultas Teknologi Informasi dan Sains Data</item>
+        <item>Fakultas Ilmu Sosial dan Politik</item>
+        <item>Fakultas Keguruan dan Ilmu Pendidikan</item>
     </string-array>
     <string-array name="data_status">
+        <item>Milik Universitas</item>
+        <item>Milik Universitas</item>
         <item>Milik Universitas</item>
         <item>Milik Universitas</item>
         <item>Milik Universitas</item>
@@ -70,6 +78,8 @@
         <item>Pendidikan</item>
         <item>Pendidikan</item>
         <item>Pendidikan</item>
+        <item>Pendidikan</item>
+        <item>Pendidikan</item>
     </string-array>
     <string-array name="data_luas">
         <item>2000 m²</item>
@@ -79,6 +89,8 @@
         <item>1500 m²</item>
         <item>1300 m²</item>
         <item>1500 m²</item>
+        <item>1400 m²</item>
+        <item>1600 m²</item>
     </string-array>
 
     <!--  PRASARANA 1  -->

@@ -1,17 +1,95 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.project_akhir_pab.ui.bluprint.BluprintFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewBluprint"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content">
 
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
 
-</RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="184dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/purple_500"
+                app:cardCornerRadius="8dp">
+
+                <ScrollView
+                    android:layout_width="381dp"
+                    android:layout_height="200dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="299dp"
+                            android:layout_height="145dp"
+                            app:srcCompat="@drawable/uns_logo" />
+
+<!--                        <TextView-->
+<!--                            android:layout_width="351dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:paddingTop="8dp"-->
+<!--                            android:text="Detail tentang sesuatu hal yang ingin Anda sampaikan."-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="16sp" />-->
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logo yang menimpa kotak dan tulisan -->
+
+
+            <!-- RecyclerView di bawah CardView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBluprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
+
+
+
+
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context="com.example.project_akhir_pab.ui.bluprint.BluprintFragment">-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerViewBluprint"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        android:paddingStart="8dp"-->
+    <!--        android:paddingEnd="8dp"-->
+    <!--        android:paddingBottom="8dp"/>-->
+
+    <!--</RelativeLayout>-->

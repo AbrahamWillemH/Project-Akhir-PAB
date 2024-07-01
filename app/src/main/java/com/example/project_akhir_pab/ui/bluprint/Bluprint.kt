@@ -5,8 +5,9 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Bluprint(
+//    val id: Int,
     val namaBluprint: String,
-//    val deskripsiBlueprint: String
+    val deskripsiBlueprint: String
 //    val lokasiLahan: String,
 //    val statusKepemilikan: String
 ): Parcelable

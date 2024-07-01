@@ -98,6 +98,7 @@
     <string name="deskripsi">Deskripsi</string>
     <string name="deskripsiBlup">Lorem ipsum dolor sit amet</string>
     <string name="harga">Harga</string>
+    <string name="logo_description" />
 
     <style name="layout">
         <item name="android:layout_height">wrap_content</item>

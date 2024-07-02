@@ -18,7 +18,7 @@ class BluprintAdapter(private val listBluprint: ArrayList<Bluprint>) : RecyclerV
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val namaBluprint: TextView = itemView.findViewById(R.id.txt1)
-        val btnDetail: TextView = itemView.findViewById(R.id.btnDetail)
+        val deskripsiBluprint: TextView = itemView.findViewById(R.id.btnDetail)
 
         init {
             itemView.setOnClickListener {
@@ -38,8 +38,9 @@ class BluprintAdapter(private val listBluprint: ArrayList<Bluprint>) : RecyclerV
     override fun getItemCount(): Int = listBluprint.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (namaBluprint) = listBluprint[position]
+        val (namaBluprint, deskripsiBluprint) = listBluprint[position]
         holder.namaBluprint.text = namaBluprint
+        holder.deskripsiBluprint.text = deskripsiBluprint
     }
 
     interface OnItemClickCallback {

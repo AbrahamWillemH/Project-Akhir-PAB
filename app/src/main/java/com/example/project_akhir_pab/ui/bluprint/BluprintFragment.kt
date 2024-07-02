@@ -87,8 +87,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
 import com.example.project_akhir_pab.databinding.FragmentBluprintBinding
 
-
-
 class BluprintFragment : Fragment(), BluprintAdapter.OnItemClickCallback {
 
     private lateinit var rvBluprint: RecyclerView

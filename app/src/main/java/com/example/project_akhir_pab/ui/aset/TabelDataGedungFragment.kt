@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
+import com.google.firebase.firestore.FirebaseFirestore
 
 class TabelDataGedungFragment : Fragment() {
 
@@ -22,6 +23,7 @@ class TabelDataGedungFragment : Fragment() {
     private lateinit var totalJumlahTextView: TextView
     private lateinit var totalLuasTextView: TextView
     private var gedungList: MutableList<Gedung> = mutableListOf()
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +58,9 @@ class TabelDataGedungFragment : Fragment() {
             loadDataForYear(selectedYear)
         }
 
+        // Initialize Firestore
+        db = FirebaseFirestore.getInstance()
+
         return view
     }
 
@@ -64,36 +69,49 @@ class TabelDataGedungFragment : Fragment() {
         // Clear previous data
         gedungList.clear()
 
-        // Retrieve the data from strings.xml
-        val gedungData = resources.getStringArray(R.array.gedung_data)
-            .map { it.split(",") }
-            .filter { it.size >= 5 && it[0] == year }
+        // Fetch data from Firestore
+        db.collection("asset").document("aset").get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    val yearData = document.get(year) as? List<Map<String, Any>>
+                    yearData?.forEach { section ->
+                        section.forEach { (location, items) ->
+                            val itemList = items as? List<Map<String, Any>>
+                            itemList?.forEach { item ->
+                                val description = item["Uraian"] as? String ?: ""
+                                val total = item["Jumlah"] as? Number ?: 0
+                                val luas = item["Luas"] as? Number ?: 0
 
-        // Variables to store the totals
-        var totalJumlah = 0
-        var totalLuas = 0.0
+                                val gedung = Gedung(
+                                    year = year,
+                                    section = location,
+                                    description = description,
+                                    total = total.toString(),
+                                    luas = luas.toString()
+                                )
+                                gedungList.add(gedung)
+                            }
+                        }
+                    }
+                    gedungAdapter.notifyDataSetChanged()
 
-        // Add items to the list
-        gedungData.forEach { item ->
-            val gedung = Gedung(
-                year = item[0],
-                section = item[1],
-                description = item[2],
-                total = item[3],
-                luas = item[4]
-            )
-            gedungList.add(gedung)
+                    // Calculate totals
+                    val totalJumlah = gedungList.sumOf { it.total.toInt() }
+                    val totalLuas = gedungList.sumOf { it.luas.toDouble() }
 
-            // Accumulate the totals
-            totalJumlah += item[3].toInt()
-            totalLuas += item[4].toDouble()
-        }
+                    // Display the totals
+                    totalJumlahTextView.text = totalJumlah.toString()
+                    totalLuasTextView.text = String.format("%.1f", totalLuas)
 
-        // Update the adapter
-        gedungAdapter.notifyDataSetChanged()
-
-        // Display the totals
-        totalJumlahTextView.text = totalJumlah.toString()
-        totalLuasTextView.text = String.format("%.3f", totalLuas)
+                    // Ensure the total TextViews are visible
+                    totalJumlahTextView.visibility = View.VISIBLE
+                    totalLuasTextView.visibility = View.VISIBLE
+                } else {
+                    // Handle case where document is null
+                }
+            }
+            .addOnFailureListener { exception ->
+                // Handle any errors
+            }
     }
 }

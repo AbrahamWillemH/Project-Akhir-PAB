@@ -23,14 +23,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <View

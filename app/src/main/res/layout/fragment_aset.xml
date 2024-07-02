@@ -56,7 +56,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tabel Data Gedung"
+                android:text="Aset Data Gedung"
                 android:padding="8dp"
                 android:background="@android:color/white"/>
             <Button
@@ -79,7 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tabel Data Tanah"
+                android:text="Aset Data Tanah"
                 android:padding="8dp"
                 android:background="@android:color/white"/>
             <Button

@@ -12,7 +12,7 @@ class GedungAdapter(private val gedungList: List<Gedung>) : RecyclerView.Adapter
     class GedungViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val noTextView: TextView = view.findViewById(R.id.noTextView)
         val descriptionTextView: TextView = view.findViewById(R.id.descriptionTextView)
-        val jumlahTextView: TextView = view.findViewById(R.id.totalTextView)
+        val totalTextView: TextView = view.findViewById(R.id.totalTextView)
         val luasTextView: TextView = view.findViewById(R.id.luasTextView)
     }
 
@@ -24,9 +24,9 @@ class GedungAdapter(private val gedungList: List<Gedung>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: GedungViewHolder, position: Int) {
         val gedung = gedungList[position]
-        holder.noTextView.text = gedung.year
+        holder.noTextView.text = (position + 1).toString() // Display the item number
         holder.descriptionTextView.text = gedung.description
-        holder.jumlahTextView.text = gedung.total
+        holder.totalTextView.text = gedung.total
         holder.luasTextView.text = gedung.luas
     }
 

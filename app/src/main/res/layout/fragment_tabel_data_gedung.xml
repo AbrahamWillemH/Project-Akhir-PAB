@@ -22,54 +22,87 @@
         android:textColor="@android:color/white"
         android:layout_marginBottom="16dp"/>
 
-    <HorizontalScrollView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2,3"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!-- Headers row -->
+        <TableRow>
+            <TextView
+                android:text="No"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Uraian"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:gravity="center"/>
+            <TextView
+                android:text="Total"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Luas"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
 
-            <TableLayout
-                android:id="@+id/table_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="1,2,3"
-                android:background="@android:color/white"
-                android:padding="8dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/white"/>
 
-                <!-- Headers row -->
-                <TableRow>
-                    <TextView
-                        android:text="No"
-                        android:padding="8dp"
-                        android:background="@android:color/darker_gray"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-                    <TextView
-                        android:text="Deskripsi"
-                        android:padding="8dp"
-                        android:background="@android:color/darker_gray"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:gravity="center"/>
-                    <TextView
-                        android:text="Total"
-                        android:padding="8dp"
-                        android:background="@android:color/darker_gray"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-                    <TextView
-                        android:text="Luas"
-                        android:padding="8dp"
-                        android:background="@android:color/darker_gray"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-                </TableRow>
-            </TableLayout>
-        </ScrollView>
-    </HorizontalScrollView>
+    <!-- Total row -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2,3"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_marginTop="16dp">
+
+        <TableRow>
+            <TextView
+                android:text="Jumlah"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/total_jumlah"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/total_luas"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

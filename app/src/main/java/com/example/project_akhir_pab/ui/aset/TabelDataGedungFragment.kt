@@ -101,7 +101,7 @@ class TabelDataGedungFragment : Fragment() {
 
                     // Display the totals
                     totalJumlahTextView.text = totalJumlah.toString()
-                    totalLuasTextView.text = String.format("%.1f", totalLuas)
+                    totalLuasTextView.text = String.format("%.2f", totalLuas)
 
                     // Ensure the total TextViews are visible
                     totalJumlahTextView.visibility = View.VISIBLE

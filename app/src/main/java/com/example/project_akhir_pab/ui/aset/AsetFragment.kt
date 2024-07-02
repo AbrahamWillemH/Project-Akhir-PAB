@@ -18,9 +18,14 @@ class AsetFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_aset, container, false)
 
         // Find the button and set up the listener
-        val buttonLihat: Button = view.findViewById(R.id.button_lihat)
-        buttonLihat.setOnClickListener {
+        val buttonLihatGedung: Button = view.findViewById(R.id.button_lihat)
+        buttonLihatGedung.setOnClickListener {
             findNavController().navigate(R.id.action_asetFragment_to_tabelDataGedungFragment)
+        }
+
+        val buttonLihatTanah: Button = view.findViewById(R.id.button_lihat2)
+        buttonLihatTanah.setOnClickListener {
+            findNavController().navigate(R.id.action_asetFragment_to_tabelDataTanahFragment)
         }
 
         return view

@@ -17,6 +17,9 @@
     <action
         android:id="@+id/action_asetFragment_to_tabelDataGedungFragment"
         app:destination="@id/nav_tabel_data_gedung" />
+    <action
+        android:id="@+id/action_asetFragment_to_tabelDataTanahFragment"
+        app:destination="@id/nav_tabel_data_tanah" />
     <fragment
         android:id="@+id/nav_bluprint"
         android:name="com.example.project_akhir_pab.ui.bluprint.BluprintFragment"
@@ -27,5 +30,10 @@
         android:name="com.example.project_akhir_pab.ui.aset.TabelDataGedungFragment"
         android:label="Tabel Data Gedung"
         tools:layout="@layout/fragment_tabel_data_gedung" />
+    <fragment
+        android:id="@+id/nav_tabel_data_tanah"
+        android:name="com.example.project_akhir_pab.ui.aset.TabelDataTanahFragment"
+        android:label="Tabel Data Tanah"
+        tools:layout="@layout/fragment_tabel_data_tanah" />
 
 </navigation>

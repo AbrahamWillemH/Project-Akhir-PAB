@@ -14,15 +14,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
 import com.google.firebase.firestore.FirebaseFirestore
 
-class TabelDataGedungFragment : Fragment() {
+class TabelDataTanahFragment : Fragment() {
 
     private lateinit var spinnerTahun: Spinner
     private lateinit var buttonPilihTahun: Button
     private lateinit var recyclerView: RecyclerView
-    private lateinit var gedungAdapter: GedungAdapter
+    private lateinit var tanahAdapter: TanahAdapter
     private lateinit var totalJumlahTextView: TextView
     private lateinit var totalLuasTextView: TextView
-    private var gedungList: MutableList<Gedung> = mutableListOf()
+    private var tanahList: MutableList<Tanah> = mutableListOf()
     private lateinit var db: FirebaseFirestore
 
     override fun onCreateView(
@@ -45,9 +45,9 @@ class TabelDataGedungFragment : Fragment() {
             spinnerTahun.adapter = adapter
         }
 
-        gedungAdapter = GedungAdapter(gedungList)
+        tanahAdapter = TanahAdapter(tanahList)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = gedungAdapter
+        recyclerView.adapter = tanahAdapter
 
         buttonPilihTahun.setOnClickListener {
             val selectedYear = spinnerTahun.selectedItem.toString()
@@ -60,10 +60,10 @@ class TabelDataGedungFragment : Fragment() {
 
     private fun loadDataForYear(year: String) {
         // Clear previous data
-        gedungList.clear()
+        tanahList.clear()
 
         // Fetch data from Firestore
-        db.collection("asset").document("aset").get()
+        db.collection("asset").document("aset2").get()
             .addOnSuccessListener { document ->
                 if (document != null) {
                     val yearData = document.get(year) as? List<Map<String, Any>>
@@ -75,22 +75,22 @@ class TabelDataGedungFragment : Fragment() {
                                 val total = item["Jumlah"] as? Number ?: 0
                                 val luas = item["Luas"] as? Number ?: 0
 
-                                val gedung = Gedung(
+                                val tanah = Tanah(
                                     year = year,
                                     section = location,
                                     description = description,
                                     total = total.toString(),
                                     luas = luas.toString()
                                 )
-                                gedungList.add(gedung)
+                                tanahList.add(tanah)
                             }
                         }
                     }
-                    gedungAdapter.notifyDataSetChanged()
+                    tanahAdapter.notifyDataSetChanged()
 
                     // Calculate totals
-                    val totalJumlah = gedungList.sumOf { it.total.toInt() }
-                    val totalLuas = gedungList.sumOf { it.luas.toDouble() }
+                    val totalJumlah = tanahList.sumOf { it.total.toInt() }
+                    val totalLuas = tanahList.sumOf { it.luas.toDouble() }
 
                     // Display the totals
                     totalJumlahTextView.text = totalJumlah.toString()

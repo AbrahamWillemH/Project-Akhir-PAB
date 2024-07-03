@@ -88,15 +88,12 @@ class TabelDataGedungFragment : Fragment() {
                     }
                     gedungAdapter.notifyDataSetChanged()
 
-                    // Calculate totals
                     val totalJumlah = gedungList.sumOf { it.total.toInt() }
                     val totalLuas = gedungList.sumOf { it.luas.toDouble() }
 
-                    // Display the totals
                     totalJumlahTextView.text = totalJumlah.toString()
                     totalLuasTextView.text = String.format("%.1f", totalLuas)
 
-                    // Ensure the total TextViews are visible
                     totalJumlahTextView.visibility = View.VISIBLE
                     totalLuasTextView.visibility = View.VISIBLE
                 }

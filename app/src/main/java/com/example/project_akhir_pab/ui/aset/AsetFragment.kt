@@ -72,15 +72,9 @@ class AsetFragment : Fragment() {
                     dataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
                     val data = BarData(dataSet)
                     barChartGedung.data = data
-
-                    // Disable the description label
                     barChartGedung.description.isEnabled = false
-
                     barChartGedung.invalidate()
                 }
-            }
-            .addOnFailureListener { exception ->
-                // Handle any errors here
             }
     }
 
@@ -110,15 +104,9 @@ class AsetFragment : Fragment() {
                     dataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
                     val data = BarData(dataSet)
                     barChartTanah.data = data
-
-                    // Disable the description label
                     barChartTanah.description.isEnabled = false
-
                     barChartTanah.invalidate()
                 }
-            }
-            .addOnFailureListener { exception ->
-                // Handle any errors here
             }
     }
 }

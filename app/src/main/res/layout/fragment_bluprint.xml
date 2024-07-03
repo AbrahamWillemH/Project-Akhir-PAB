@@ -1,144 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:stretchColumns="*"
-    tools:context=".ui.bluprint.BluprintFragment">
+    tools:context="com.example.project_akhir_pab.ui.bluprint.BluprintFragment"
+    android:background="@drawable/bg_main">
 
-    <!-- First Row -->
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 1" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 2" />
+            android:padding="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 3" />
-    </TableRow>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="184dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/purple_500"
+                app:cardCornerRadius="8dp">
 
-    <!-- Second Row -->
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 4" />
+                <ScrollView
+                    android:layout_width="381dp"
+                    android:layout_height="200dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 5" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 6" />
-    </TableRow>
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="299dp"
+                            android:layout_height="145dp"
+                            app:srcCompat="@drawable/uns_logo" />
 
-    <!-- Third Row -->
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 7" />
+<!--                        <TextView-->
+<!--                            android:layout_width="351dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:paddingTop="8dp"-->
+<!--                            android:text="Detail tentang sesuatu hal yang ingin Anda sampaikan."-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="16sp" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 8" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 9" />
-    </TableRow>
+                    </LinearLayout>
+                </ScrollView>
 
-    <!-- Fourth Row -->
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 10" />
+            </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 11" />
+            <!-- Logo yang menimpa kotak dan tulisan -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 12" />
-    </TableRow>
 
-    <!-- Fifth Row -->
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 13" />
+            <!-- RecyclerView di bawah CardView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBluprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 14" />
+        </RelativeLayout>
+    </ScrollView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cell_border"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Cell 15" />
-    </TableRow>
-</TableLayout>
+</FrameLayout>
+
+
+
+
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context="com.example.project_akhir_pab.ui.bluprint.BluprintFragment">-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerViewBluprint"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        android:paddingStart="8dp"-->
+    <!--        android:paddingEnd="8dp"-->
+    <!--        android:paddingBottom="8dp"/>-->
+
+    <!--</RelativeLayout>-->

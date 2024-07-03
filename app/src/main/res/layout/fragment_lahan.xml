@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.project_akhir_pab.ui.lahan.LahanFragment">
+    tools:context="com.example.project_akhir_pab.ui.lahan.LahanFragment"
+    android:background="@drawable/bg_main">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLokasiKepemilikanLahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"/>

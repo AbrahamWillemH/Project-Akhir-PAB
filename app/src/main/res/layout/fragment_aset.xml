@@ -94,4 +94,20 @@
 
     </TableLayout>
 
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/gedungchart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/tanahchart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"/>
+
 </LinearLayout>

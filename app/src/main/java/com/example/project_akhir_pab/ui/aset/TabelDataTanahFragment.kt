@@ -29,7 +29,7 @@ class TabelDataTanahFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_tabel_data_gedung, container, false)
+        val view = inflater.inflate(R.layout.fragment_tabel_data_tanah, container, false)
         spinnerTahun = view.findViewById(R.id.spinner_tahun)
         buttonPilihTahun = view.findViewById(R.id.button_pilih_tahun)
         recyclerView = view.findViewById(R.id.recycler_view)

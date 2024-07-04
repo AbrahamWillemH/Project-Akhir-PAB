@@ -157,6 +157,11 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <string name="jenis_prasarana">Jenis Prasarana</string>
+    <string name="sumber_dana">Sumber Dana</string>
+    <string name="rencana_investasi">Rencana Investasi</string>
+    <string name="investasi_tahap_3">Investasi Tahap 3</string>
+
     <string-array name="data_motor_nama">
         <item>Kantin FP UNS</item>
         <item>Kantin FEB UNS</item>

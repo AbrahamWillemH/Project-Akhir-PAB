@@ -61,5 +61,4 @@ dependencies {
     implementation (libs.play.services.maps)
     implementation (libs.osmdroid.android)
 
-
 }

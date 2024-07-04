@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.project_akhir_pab.R
-import com.google.firebase.firestore.FirebaseFirestore
 
 class DetailPrasarana2 : Fragment() {
     private lateinit var imgFoto: ImageView
@@ -17,8 +16,6 @@ class DetailPrasarana2 : Fragment() {
     private lateinit var tvSumberDana: TextView
     private lateinit var tvRencanaInvestasi: TextView
     private lateinit var tvInvestasiTahap3: TextView
-
-    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,32 +33,14 @@ class DetailPrasarana2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        arguments?.let {
-            val prasaranaId = it.getString("prasarana_id", "")
-            prasaranaId?.let { id ->
-                db.collection("prasarana_tambahan")
-                    .document(id)
-                    .get()
-                    .addOnSuccessListener { document ->
-                        if (document != null) {
-                            val prasarana = document.toObject(Prasarana2::class.java)
-                            prasarana?.let { data ->
-                                tvJenis.text = data.jenisPrasarana
-                                tvSumberDana.text = data.sumberDana
-                                tvRencanaInvestasi.text = data.rencanaInvestasi
-                                tvInvestasiTahap3.text = data.investasiTahap3
-                                Glide.with(requireContext())
-                                    .load(data.photoUrl)
-                                    .into(imgFoto)
-                            }
-                        } else {
-                            // Document does not exist
-                        }
-                    }
-                    .addOnFailureListener { exception ->
-                        // Handle any errors
-                    }
-            }
+        arguments?.getParcelable<Prasarana2>("EXTRA_PRASARANA2")?.let { prasarana ->
+            tvJenis.text = prasarana.jenisPrasarana
+            tvSumberDana.text = prasarana.sumberDana
+            tvRencanaInvestasi.text = prasarana.rencanaInvestasi
+            tvInvestasiTahap3.text = prasarana.investasiTahap3
+            Glide.with(requireContext())
+                .load(prasarana.photoUrl)
+                .into(imgFoto)
         }
     }
 }

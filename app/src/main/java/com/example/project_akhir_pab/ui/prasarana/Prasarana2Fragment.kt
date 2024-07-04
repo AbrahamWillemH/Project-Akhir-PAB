@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project_akhir_pab.R
 import com.example.project_akhir_pab.databinding.FragmentPrasarana2Binding
 import com.google.firebase.firestore.FirebaseFirestore
 
-class Prasarana2Fragment : Fragment() {
+class Prasarana2Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener {
 
     private var _binding: FragmentPrasarana2Binding? = null
     private val binding get() = _binding!!
@@ -33,7 +35,7 @@ class Prasarana2Fragment : Fragment() {
         firestore = FirebaseFirestore.getInstance()
 
         binding.rvData.layoutManager = LinearLayoutManager(requireContext())
-        prasaranaAdapter = ListPrasarana2Adapter(prasaranaList)
+        prasaranaAdapter = ListPrasarana2Adapter(prasaranaList, this)
         binding.rvData.adapter = prasaranaAdapter
 
         fetchPrasaranaData()
@@ -68,6 +70,13 @@ class Prasarana2Fragment : Fragment() {
             .addOnFailureListener { exception ->
                 Log.e("Prasarana2Fragment", "Error fetching data", exception)
             }
+    }
+
+    override fun onItemClicked(prasarana: Prasarana2) {
+        val bundle = Bundle().apply {
+            putParcelable("EXTRA_PRASARANA2", prasarana)
+        }
+        findNavController().navigate(R.id.action_nav_prasarana2_to_detailPrasarana2, bundle)
     }
 
     override fun onDestroyView() {

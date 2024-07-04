@@ -7,8 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.project_akhir_pab.databinding.ItemRowPrasarana2Binding
 
-class ListPrasarana2Adapter(private val prasaranaList: List<Prasarana2>) :
-    RecyclerView.Adapter<ListPrasarana2Adapter.PrasaranaViewHolder>() {
+class ListPrasarana2Adapter(
+    private val prasaranaList: List<Prasarana2>,
+    private val itemClickListener: OnItemClickListener
+) : RecyclerView.Adapter<ListPrasarana2Adapter.PrasaranaViewHolder>() {
+
+    interface OnItemClickListener {
+        fun onItemClicked(prasarana: Prasarana2)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrasaranaViewHolder {
         val binding = ItemRowPrasarana2Binding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,6 +35,10 @@ class ListPrasarana2Adapter(private val prasaranaList: List<Prasarana2>) :
             binding.tvDetailPrasaranaRencanaInv.text = prasarana.rencanaInvestasi
             binding.tvDetailPrasaranaInv3.text = prasarana.investasiTahap3
             Glide.with(binding.root.context).load(prasarana.photoUrl).into(binding.imgDetailPrasaranaPhoto)
+
+            binding.root.setOnClickListener {
+                itemClickListener.onItemClicked(prasarana)
+            }
         }
     }
 }

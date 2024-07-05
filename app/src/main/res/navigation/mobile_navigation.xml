@@ -52,7 +52,7 @@
     <fragment
         android:id="@+id/nav_prasarana2"
         android:name="com.example.project_akhir_pab.ui.prasarana.Prasarana2Fragment"
-        android:label="Prasarana 2"
+        android:label="Prasarana Tambahan"
         tools:layout="@layout/fragment_prasarana2" >
         <action
             android:id="@+id/action_nav_prasarana2_to_detailPrasarana2"

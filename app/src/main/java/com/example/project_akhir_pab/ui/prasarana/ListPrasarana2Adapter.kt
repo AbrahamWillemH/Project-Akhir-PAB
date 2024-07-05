@@ -34,7 +34,7 @@ class ListPrasarana2Adapter(
             binding.tvDetailPrasaranaSumberDana.text = prasarana.sumberDana
             binding.tvDetailPrasaranaRencanaInv.text = prasarana.rencanaInvestasi
             binding.tvDetailPrasaranaInv3.text = prasarana.investasiTahap3
-            Glide.with(binding.root.context).load(prasarana.photoUrl).into(binding.imgDetailPrasaranaPhoto)
+//            Glide.with(binding.root.context).load(prasarana.photoUrl).into(binding.imgDetailPrasaranaPhoto)
 
             binding.root.setOnClickListener {
                 itemClickListener.onItemClicked(prasarana)

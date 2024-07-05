@@ -16,9 +16,6 @@
         android:theme="@style/Theme.PAB_android_projek_aset"
         tools:targetApi="31">
         <activity
-            android:name=".ui.bluprint.DetailBluprintFragment"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

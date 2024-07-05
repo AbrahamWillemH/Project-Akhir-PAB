@@ -254,4 +254,12 @@
         <item>Lorem ipsum dolor sit amet</item>
     </string-array>
 
+    <!--    BLUEPRINT   -->
+    <string name="jaringan">Interkoneksi Jaringan</string>
+    <string name="teks_deskripsi_bluprint">Sarana dan Prasarana Teknologi Informasi di UNS diletakkan di UPT Teknologi Informasi dan Komunikasi, Fakultas, Lembaga, Biro dan UPT. Kampus UNS yang terletak tidak dalam satu area, semua telah terkoneksi dengan jaringan Fiber Optic (FO), sehingga interkoneksi di UNS terjamin.</string>
+    <string name="network">Network Operating Center</string>
+    <string name="jaringan_bluprint">Isi Bluprint</string>
+    <string name="status_bluprint">Status Bluprint</string>
+    <string name="jumlah">jumlah</string>
+
 </resources>

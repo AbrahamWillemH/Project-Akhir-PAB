@@ -8,9 +8,9 @@
         android:icon="@drawable/ic_menu_aset"
         android:title="Aset" />
     <item
-        android:id="@+id/nav_bluprint"
+        android:id="@+id/nav_blueprint"
         android:icon="@drawable/ic_menu_bluprint"
-        android:title="Bluprint" />
+        android:title="Blueprint" />
     <item
         android:id="@+id/nav_prasarana1"
         android:icon="@drawable/ic_menu_prasarana1"

@@ -20,14 +20,30 @@
     <action
         android:id="@+id/action_asetFragment_to_tabelDataTanahFragment"
         app:destination="@id/nav_tabel_data_tanah" />
+
+<!--    Navigation Blueprint-->
     <fragment
-        android:id="@+id/nav_bluprint"
-        android:name="com.example.project_akhir_pab.ui.bluprint.BluprintFragment"
-        android:label="Bluprint"
-        tools:layout="@layout/fragment_bluprint" />
+        android:id="@+id/nav_blueprint"
+        android:name="com.example.project_akhir_pab.ui.blueprint.BlueprintFragment"
+        android:label="Blueprint"
+        tools:layout="@layout/fragment_blueprint" >
         <action
-            android:id="@+id/action_nav_bluprint_to_detailBluprintFragment"
-            app:destination="@id/detailBluprintFragment" />
+            android:id="@+id/action_blueprintFragment_to_jaringanFragment"
+            app:destination="@id/jaringanFragment" />
+        <action
+            android:id="@+id/action_blueprintFragment_to_networkFragment"
+            app:destination="@id/networkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jaringanFragment"
+        android:name="com.example.project_akhir_pab.ui.blueprint.JaringanFragment"
+        android:label="Jaringan-Interkoneksi" />
+    <fragment
+        android:id="@+id/networkFragment"
+        android:name="com.example.project_akhir_pab.ui.blueprint.NetworkFragment"
+        android:label="Alat NOC" />
+
+<!--    -->
     <fragment
         android:id="@+id/nav_prasarana1"
         android:name="com.example.project_akhir_pab.ui.prasarana.Prasarana1Fragment"
@@ -62,12 +78,6 @@
         android:name="com.example.project_akhir_pab.ui.aset.TabelDataTanahFragment"
         android:label="Tabel Data Tanah"
         tools:layout="@layout/fragment_tabel_data_tanah" />
-
-    <fragment
-        android:id="@+id/detailBluprintFragment"
-        android:name="com.example.project_akhir_pab.ui.bluprint.DetailBluprintFragment"
-        android:label="@string/detail"
-        tools:layout="@layout/fragment_detail_bluprint" />
 
     <fragment
         android:id="@+id/detailLahanFragment"

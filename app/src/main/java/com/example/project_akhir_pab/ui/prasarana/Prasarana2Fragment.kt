@@ -1,74 +1,86 @@
 package com.example.project_akhir_pab.ui.prasarana
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
+import com.example.project_akhir_pab.databinding.FragmentPrasarana2Binding
+import com.google.firebase.firestore.FirebaseFirestore
 
-class Prasarana2Fragment : Fragment() {
+class Prasarana2Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener {
 
-    private lateinit var rvData: RecyclerView
-    private lateinit var list: ArrayList<Prasarana2>
+    private var _binding: FragmentPrasarana2Binding? = null
+    private val binding get() = _binding!!
+    private lateinit var prasaranaList: ArrayList<Prasarana2>
+    private lateinit var prasaranaAdapter: ListPrasarana2Adapter
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_prasarana2, container, false)
-        rvData = view.findViewById(R.id.rv_motor)
-        rvData.setHasFixedSize(true)
-
-        list = getListData()
-
-        return view
+        _binding = FragmentPrasarana2Binding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        showRecyclerList()
+        prasaranaList = ArrayList()
+        firestore = FirebaseFirestore.getInstance()
+
+        binding.rvData.layoutManager = LinearLayoutManager(requireContext())
+        prasaranaAdapter = ListPrasarana2Adapter(prasaranaList, this)
+        binding.rvData.adapter = prasaranaAdapter
+
+        fetchPrasaranaData()
     }
 
-    private fun getListData(): ArrayList<Prasarana2> {
-        val dataName = resources.getStringArray(R.array.data_motor_nama)
-        val dataName2 = resources.getStringArray(R.array.data_motor_harga)
-        val dataDesc = resources.getStringArray(R.array.data_motor_desc)
-        val dataImg = resources.obtainTypedArray(R.array.data_motor_img)
-        val listData = ArrayList<Prasarana2>()
-        for (i in dataName.indices) {
-            val motor = Prasarana2(dataName[i], dataName2[i], dataDesc[i], dataImg.getResourceId(i, -1))
-            listData.add(motor)
-        }
-        dataImg.recycle()
-        return listData
-    }
-
-    private fun showRecyclerList() {
-        rvData.layoutManager = LinearLayoutManager(requireContext())
-        val listDataAdapter = ListPrasarana2Adapter(list)
-        rvData.adapter = listDataAdapter
-
-        listDataAdapter.setOnItemClickCallback(object : ListPrasarana2Adapter.OnItemClickMotorback {
-            override fun onItemClicked(data: Prasarana2) {
-                showSelectedData(data)
+    private fun fetchPrasaranaData() {
+        firestore.collection("asset").document("prasarana_tambahan").get()
+            .addOnSuccessListener { document ->
+                if (document != null && document.exists()) {
+                    val dataArray = document.get("data") as? List<Map<String, Any>>
+                    Log.d("Prasarana2Fragment", "Data fetched: $dataArray")
+                    if (dataArray != null) {
+                        for (dataMap in dataArray) {
+                            val prasarana = Prasarana2(
+                                jenisPrasarana = dataMap["Jenis"] as? String ?: "N/A",
+                                sumberDana = dataMap["s_dana"] as? String ?: "N/A",
+                                rencanaInvestasi = (dataMap["rencaran_inv"] as? Long)?.toString() ?: "N/A",
+                                investasiTahap3 = (dataMap["inv_3"] as? Long)?.toString() ?: "N/A",
+                                photoUrl = dataMap["gambar"] as? String ?: ""
+                            )
+                            Log.d("Prasarana2Fragment", "Parsed prasarana: $prasarana")
+                            prasaranaList.add(prasarana)
+                        }
+                        prasaranaAdapter.notifyDataSetChanged()
+                    } else {
+                        Log.d("Prasarana2Fragment", "Data array is null")
+                    }
+                } else {
+                    Log.d("Prasarana2Fragment", "No document found")
+                }
             }
-        })
+            .addOnFailureListener { exception ->
+                Log.e("Prasarana2Fragment", "Error fetching data", exception)
+            }
     }
 
-    private fun showSelectedData(motor: Prasarana2) {
-        val position = list.indexOf(motor)
-
+    override fun onItemClicked(prasarana: Prasarana2) {
         val bundle = Bundle().apply {
-            putParcelable("selected_mobil", motor)
-            putInt("selected_position", position)
+            putParcelable("EXTRA_PRASARANA2", prasarana)
         }
-
         findNavController().navigate(R.id.action_nav_prasarana2_to_detailPrasarana2, bundle)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -123,6 +123,13 @@
         <item>10</item>
     </string-array>
 
+    <!-- Tahun Aset -->
+    <string-array name="tahun_array">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+    </string-array>
+
     <!--    Punya Billie-->
     <string name="nama">Nama </string>
     <string name="deskripsi">Deskripsi</string>
@@ -228,7 +235,7 @@
         <item>Rencana MEP</item>
         <item>Spesifikasi</item>
     </string-array>
-    
+
     <string-array name="deskripsi_bluprint">
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>

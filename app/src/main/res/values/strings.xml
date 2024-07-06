@@ -136,6 +136,15 @@
     <string name="rencana_investasi">Rencana Investasi</string>
     <string name="investasi_tahap_3">Investasi Tahap 3</string>
 
+    <string name="teks_judul_prasarana2">Prasarana tambahan yang dikelola dalam tiga tahun terakhir</string>
+    <string name="teks_jenis_prasarana2">Jenis Prasarana Tambahan</string>
+    <string name="teks_3tahun_prasarana2">Investasi Prasarana Selama Tiga Tahun Terakhir \n(Juta Rupiah)</string>
+    <string name="teks_rencana_prasarana2">Rencana Investasi Prasarana dalam Lima Tahun Mendatang</string>
+    <string name="teks_nilai_prasarana2">Nilai Investasi (Juta Rupiah)</string>
+    <string name="teks_sumber_prasarana2">Sumber Dana</string>
+    <string name="teks_lokasi_prasarana2">Lokasi</string>
+    <string name="teks_copyright_prasarana2">Copyright © 2016-2024 Universitas Sebelas Maret</string>
+
     <style name="border">
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_width">match_parent</item>

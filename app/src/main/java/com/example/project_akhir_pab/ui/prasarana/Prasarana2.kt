@@ -9,5 +9,9 @@ data class Prasarana2(
     val sumberDana: String,
     val rencanaInvestasi: String,
     val investasiTahap3: String,
-    val photoUrl: String
+    val photoUrl: String,
+    val latitude: Double,
+    val longitude: Double
 ) : Parcelable
+
+

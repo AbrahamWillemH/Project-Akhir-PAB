@@ -54,30 +54,36 @@ class Prasarana2Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener
                                 sumberDana = dataMap["s_dana"] as? String ?: "N/A",
                                 rencanaInvestasi = (dataMap["rencaran_inv"] as? Long)?.toString() ?: "N/A",
                                 investasiTahap3 = (dataMap["inv_3"] as? Long)?.toString() ?: "N/A",
-                                photoUrl = dataMap["gambar"] as? String ?: ""
+                                photoUrl = dataMap["gambar"] as? String ?: "",
+                                latitude = (dataMap["latitude"] as? Double) ?: -7.558861637127492,
+                                longitude = (dataMap["longitude"] as? Double) ?: 110.8565092460276
                             )
                             Log.d("Prasarana2Fragment", "Parsed prasarana: $prasarana")
                             prasaranaList.add(prasarana)
                         }
                         prasaranaAdapter.notifyDataSetChanged()
                     } else {
-                        Log.d("Prasarana2Fragment", "Data array is null")
+                        Log.d("Prasarana2Fragment", "null")
                     }
                 } else {
-                    Log.d("Prasarana2Fragment", "No document found")
+                    Log.d("Prasarana2Fragment", "null")
                 }
             }
             .addOnFailureListener { exception ->
-                Log.e("Prasarana2Fragment", "Error fetching data", exception)
+                Log.e("Prasarana2Fragment", "null", exception)
             }
     }
 
+
+
     override fun onItemClicked(prasarana: Prasarana2) {
+        Log.d("Prasarana2Fragment", "Passing data: $prasarana")
         val bundle = Bundle().apply {
             putParcelable("EXTRA_PRASARANA2", prasarana)
         }
         findNavController().navigate(R.id.action_nav_prasarana2_to_detailPrasarana2, bundle)
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

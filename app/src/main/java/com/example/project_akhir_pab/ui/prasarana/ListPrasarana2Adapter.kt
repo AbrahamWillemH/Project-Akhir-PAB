@@ -22,9 +22,11 @@ class ListPrasarana2Adapter(
     }
 
     override fun onBindViewHolder(holder: PrasaranaViewHolder, position: Int) {
-        Log.d("ListPrasarana2Adapter", "Binding data at position $position: ${prasaranaList[position]}")
-        holder.bind(prasaranaList[position])
+        val prasarana = prasaranaList[position]
+        Log.d("ListPrasarana2Adapter", "Binding data at position $position: ${prasarana.latitude}, ${prasarana.longitude}")
+        holder.bind(prasarana)
     }
+
 
     override fun getItemCount(): Int = prasaranaList.size
 

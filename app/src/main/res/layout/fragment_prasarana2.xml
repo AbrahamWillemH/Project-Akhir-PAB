@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Prasarana tambahan yang dikelola dalam tiga tahun terakhir"
+                android:text="@string/teks_judul_prasarana2"
                 style="@style/border.style_5"
                 android:layout_span="4" />
         </TableRow>
@@ -44,7 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="Jenis Prasarana Tambahan"
+                android:text="@string/teks_jenis_prasarana2"
                 style="@style/border.style_1"/>
 
             <TextView
@@ -52,7 +52,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="Investasi Prasarana Selama Tiga Tahun Terakhir \n (Juta Rupiah)"
+                android:text="@string/teks_3tahun_prasarana2"
                 style="@style/border.style_1" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:text="Rencana Investasi Prasarana dalam Tahun Mendatang"
+                android:text="@string/teks_rencana_prasarana2"
                 style="@style/border.style_1"/>
         </TableRow>
         <TableRow>
@@ -81,7 +81,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:text="Nilai Investasi (Juta Rupiah)"
+                android:text="@string/teks_nilai_prasarana2"
                 style="@style/border.style_3"/>
 
             <TextView
@@ -89,7 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
-                android:text="Sumber Dana"
+                android:text="@string/teks_sumber_prasarana2"
                 style="@style/border.style_3"/>
         </TableRow>
     </TableLayout>

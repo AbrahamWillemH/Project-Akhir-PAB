@@ -8,6 +8,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="title_home">Asset</string>
+    <string name="desc_home">Welcome to our platform designed to streamline integrated management of asset, land, infrastructure, and blueprint information, supporting efficient planning and maintenance of infrastructure.</string>
     <string name="menu_bluprint">Bluprint</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

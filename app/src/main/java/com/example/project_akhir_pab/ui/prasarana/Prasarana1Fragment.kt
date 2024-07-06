@@ -1,74 +1,92 @@
-package com.example.project_akhir_pab.ui.prasarana//package com.example.project_akhir_pab.ui.prasarana
-//
-//import android.os.Bundle
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import androidx.fragment.app.Fragment
-//import androidx.navigation.fragment.findNavController
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import androidx.recyclerview.widget.RecyclerView
-//import com.example.project_akhir_pab.R
-//import com.example.project_akhir_pab.databinding.FragmentLahanBinding
-//import com.example.project_akhir_pab.ui.lahan.LahanAdapter
-//import com.example.project_akhir_pab.ui.lahan.Lahan
-//
-//class Prasarana1Fragment : Fragment(), LahanAdapter.OnItemClickCallback {
-//
-//    private lateinit var rvLahan: RecyclerView
-//    private lateinit var listLahan: ArrayList<Lahan>
-//    private var _binding: FragmentLahanBinding? = null
-//    private val binding get() = _binding!!
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//        _binding = FragmentLahanBinding.inflate(inflater, container, false)
-//        return binding.root
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        rvLahan = binding.recyclerViewLokasiKepemilikanLahan
-//        rvLahan.setHasFixedSize(true)
-//
-//        listLahan = ArrayList()
-//        listLahan.addAll(getListLahan())
-//        showRecyclerList()
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-//
-//    private fun getListLahan(): List<Lahan> {
-//        val dataLokasi = resources.getStringArray(R.array.data_lokasi)
-//        val dataStatus = resources.getStringArray(R.array.data_status)
-//        val dataPenggunaan = resources.getStringArray(R.array.data_penggunaan)
-//        val dataLuas = resources.getStringArray(R.array.data_luas)
-//
-//        val listLahan = ArrayList<Lahan>()
-//        for (i in dataLokasi.indices) {
-//            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i])
-//            listLahan.add(lahan)
-//        }
-//        return listLahan
-//    }
-//
-//    private fun showRecyclerList() {
-//        rvLahan.layoutManager = LinearLayoutManager(requireContext())
-//        val listLahanAdapter = LahanAdapter(listLahan)
-//        listLahanAdapter.setOnItemClickCallback(this)
-//        rvLahan.adapter = listLahanAdapter
-//    }
-//
-//    override fun onItemClicked(data: Lahan) {
-//        val bundle = Bundle().apply {
-//            putParcelable("EXTRA_LAHAN", data)
-//        }
-//        findNavController().navigate(R.id.action_nav_lahan_to_detailLahanFragment, bundle)
-//    }
-//}
+package com.example.project_akhir_pab.ui.prasarana
+
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project_akhir_pab.R
+import com.example.project_akhir_pab.databinding.FragmentPrasarana2Binding
+import com.google.firebase.firestore.FirebaseFirestore
+
+class Prasarana1Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener {
+
+    private var _binding: FragmentPrasarana2Binding? = null
+    private val binding get() = _binding!!
+    private lateinit var prasaranaList: ArrayList<Prasarana2>
+    private lateinit var prasaranaAdapter: ListPrasarana2Adapter
+    private lateinit var firestore: FirebaseFirestore
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentPrasarana2Binding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        prasaranaList = ArrayList()
+        firestore = FirebaseFirestore.getInstance()
+
+        binding.rvData.layoutManager = LinearLayoutManager(requireContext())
+        prasaranaAdapter = ListPrasarana2Adapter(prasaranaList, this)
+        binding.rvData.adapter = prasaranaAdapter
+
+        fetchPrasaranaData()
+    }
+
+    private fun fetchPrasaranaData() {
+        firestore.collection("asset").document("prasarana_tambahan").get()
+            .addOnSuccessListener { document ->
+                if (document != null && document.exists()) {
+                    val dataArray = document.get("data") as? List<Map<String, Any>>
+                    Log.d("Prasarana2Fragment", "Data fetched: $dataArray")
+                    if (dataArray != null) {
+                        for (dataMap in dataArray) {
+                            val prasarana = Prasarana2(
+                                jenisPrasarana = dataMap["Jenis"] as? String ?: "N/A",
+                                sumberDana = dataMap["s_dana"] as? String ?: "N/A",
+                                rencanaInvestasi = (dataMap["rencaran_inv"] as? Long)?.toString() ?: "N/A",
+                                investasiTahap3 = (dataMap["inv_3"] as? Long)?.toString() ?: "N/A",
+                                photoUrl = dataMap["gambar"] as? String ?: "",
+                                latitude = (dataMap["latitude"] as? Double) ?: -7.558861637127492,
+                                longitude = (dataMap["longitude"] as? Double) ?: 110.8565092460276
+                            )
+                            Log.d("Prasarana2Fragment", "Parsed prasarana: $prasarana")
+                            prasaranaList.add(prasarana)
+                        }
+                        prasaranaAdapter.notifyDataSetChanged()
+                    } else {
+                        Log.d("Prasarana2Fragment", "null")
+                    }
+                } else {
+                    Log.d("Prasarana2Fragment", "null")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.e("Prasarana2Fragment", "null", exception)
+            }
+    }
+
+
+
+    override fun onItemClicked(prasarana: Prasarana2) {
+        Log.d("Prasarana2Fragment", "Passing data: $prasarana")
+        val bundle = Bundle().apply {
+            putParcelable("EXTRA_PRASARANA2", prasarana)
+        }
+        findNavController().navigate(R.id.action_nav_prasarana2_to_detailPrasarana2, bundle)
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

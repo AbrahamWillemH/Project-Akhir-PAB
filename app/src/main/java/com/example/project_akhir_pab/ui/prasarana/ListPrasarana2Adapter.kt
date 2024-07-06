@@ -1,48 +1,46 @@
 package com.example.project_akhir_pab.ui.prasarana
 
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.project_akhir_pab.R
+import com.bumptech.glide.Glide
+import com.example.project_akhir_pab.databinding.ItemRowPrasarana2Binding
 
-class ListPrasarana2Adapter(private val listmotor : ArrayList<Prasarana2>) : RecyclerView.Adapter<ListPrasarana2Adapter.ListViewHolder>() {
+class ListPrasarana2Adapter(
+    private val prasaranaList: List<Prasarana2>,
+    private val itemClickListener: OnItemClickListener
+) : RecyclerView.Adapter<ListPrasarana2Adapter.PrasaranaViewHolder>() {
 
-    private lateinit var onItemClickMotorback: OnItemClickMotorback
-
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgFoto : ImageView = itemView.findViewById(R.id.img_item_motor_photo)
-        val tvName : TextView = itemView.findViewById(R.id.tv_item_motor_name)
-        val tvName2 : TextView = itemView.findViewById(R.id.tv_item_motor_harga)
-        val tvdesc : TextView = itemView.findViewById(R.id.tv_item_motor_description)
+    interface OnItemClickListener {
+        fun onItemClicked(prasarana: Prasarana2)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_prasarana2, parent, false)
-        return ListViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrasaranaViewHolder {
+        val binding = ItemRowPrasarana2Binding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PrasaranaViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = listmotor.size
+    override fun onBindViewHolder(holder: PrasaranaViewHolder, position: Int) {
+        val prasarana = prasaranaList[position]
+        Log.d("ListPrasarana2Adapter", "Binding data at position $position: ${prasarana.latitude}, ${prasarana.longitude}")
+        holder.bind(prasarana)
+    }
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val informasi = listmotor[position]
-        holder.imgFoto.setImageResource(informasi.img)
-        holder.tvName.text = informasi.name
-        holder.tvName2.text = informasi.name2
-        holder.tvdesc.text = informasi.desc
 
-        holder.itemView.setOnClickListener {
-            onItemClickMotorback.onItemClicked((listmotor[holder.adapterPosition]))
+    override fun getItemCount(): Int = prasaranaList.size
+
+    inner class PrasaranaViewHolder(private val binding: ItemRowPrasarana2Binding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(prasarana: Prasarana2) {
+            binding.tvDetailPrasaranaJenis.text = prasarana.jenisPrasarana
+            binding.tvDetailPrasaranaSumberDana.text = prasarana.sumberDana
+            binding.tvDetailPrasaranaRencanaInv.text = prasarana.rencanaInvestasi
+            binding.tvDetailPrasaranaInv3.text = prasarana.investasiTahap3
+//            Glide.with(binding.root.context).load(prasarana.photoUrl).into(binding.imgDetailPrasaranaPhoto)
+
+            binding.root.setOnClickListener {
+                itemClickListener.onItemClicked(prasarana)
+            }
         }
-    }
-
-    interface OnItemClickMotorback {
-        fun onItemClicked(data: Prasarana2)
-    }
-
-    fun setOnItemClickCallback(onItemClickSurahback: OnItemClickMotorback) {
-        this.onItemClickMotorback = onItemClickSurahback
     }
 }

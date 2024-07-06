@@ -13,6 +13,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project_akhir_pab.R
 import com.example.project_akhir_pab.databinding.ActivityMainBinding
+import android.app.Application
+import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_home, R.id.nav_aset, R.id.nav_bluprint, R.id.nav_prasarana1, R.id.nav_prasarana2, R.id.nav_lahan), // Menambahkan ID fragment
+            setOf(R.id.nav_home, R.id.nav_aset, R.id.nav_blueprint, R.id.nav_prasarana1, R.id.nav_prasarana2, R.id.nav_lahan), // Menambahkan ID fragment
             drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

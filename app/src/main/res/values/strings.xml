@@ -131,98 +131,79 @@
     </string-array>
 
     <!--    Punya Billie-->
-    <string name="nama">Nama </string>
-    <string name="deskripsi">Deskripsi</string>
+    <string name="jenis_prasarana">Jenis Prasarana</string>
+    <string name="sumber_dana">Sumber Dana</string>
+    <string name="rencana_investasi">Rencana Investasi</string>
+    <string name="investasi_tahap_3">Investasi Tahap 3</string>
+
+    <string name="teks_judul_prasarana2">Prasarana tambahan yang dikelola dalam tiga tahun terakhir</string>
+    <string name="teks_jenis_prasarana2">Jenis Prasarana Tambahan</string>
+    <string name="teks_3tahun_prasarana2">Investasi Prasarana Selama Tiga Tahun Terakhir \n(Juta Rupiah)</string>
+    <string name="teks_rencana_prasarana2">Rencana Investasi Prasarana dalam Lima Tahun Mendatang</string>
+    <string name="teks_nilai_prasarana2">Nilai Investasi (Juta Rupiah)</string>
+    <string name="teks_sumber_prasarana2">Sumber Dana</string>
+    <string name="teks_lokasi_prasarana2">Lokasi</string>
+    <string name="teks_copyright_prasarana2">Copyright © 2016-2024 Universitas Sebelas Maret</string>
+
+    <style name="border">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="border.style_1">
+        <item name="android:background">@drawable/table_prasarana_border_style_1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="border.style_2">
+        <item name="android:background">@drawable/table_prasarana_border_style_2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="border.style_3">
+        <item name="android:background">@drawable/table_prasarana_border_style_3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="border.style_4">
+        <item name="android:background">@drawable/table_prasarana_border_style_4</item>
+    </style>
+
+    <style name="border.style_5">
+        <item name="android:background">@drawable/table_prasarana_border_style_5</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="border.style_6">
+        <item name="android:background">@drawable/table_prasarana_border_style_7</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="border.style_7">
+        <item name="android:background">@drawable/table_prasarana_border_style_6</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="border.style_8">
+        <item name="android:background">@drawable/table_prasarana_border_style_7</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <!-- Bluprint -->
     <string name="deskripsiBlup">Lorem ipsum dolor sit amet</string>
-    <string name="harga">Harga</string>
     <string name="logo_description" />
 
-    <style name="layout">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-    </style>
-
-    <style name="layout.text1">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">22sp</item>
-    </style>
-
-    <style name="layout.text2">
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="layout.text3">
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <string-array name="data_motor_nama">
-        <item>Kantin FP UNS</item>
-        <item>Kantin FEB UNS</item>
-        <item>Kantin FMIPA UNS</item>
-        <item>Kantin FK UNS</item>
-        <item>Kantin FT UNS</item>
-        <item>Kantin FH UNS</item>
-        <item>Kantin FISIP UNS</item>
-        <item>Kantin FKIP UNS</item>
-        <item>Kantin FSRD UNS</item>
-        <item>Kantin FKor UNS</item>
-    </string-array>
-
-    <string-array name="data_motor_desc">
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-        <item>Unit: Fakultas Pertanian</item>
-    </string-array>
-
-    <string-array name="data_motor_harga">
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-        <item>Kategori: Sewa Aset</item>
-    </string-array>
-
-    <integer-array name="data_motor_img">
-        <item>@drawable/prasarana_kantin_fp</item>
-        <item>@drawable/prasarana_kantin_fib</item>
-        <item>@drawable/prasarana_kantin_fmipa</item>
-        <item>@drawable/prasarana_kantin_fkip</item>
-        <item>@drawable/prasarana_kantin_ft</item>
-        <item>@drawable/prasarana_kantin_fh</item>
-        <item>@drawable/prasarana_kantin_fisip</item>
-        <item>@drawable/prasarana_kantin_fkip</item>
-        <item>@drawable/prasarana_kantin_fsrd</item>
-        <item>@drawable/prasarana_kantin_fkor</item>
-    </integer-array>
-
-    <string-array name="data_motor_news">
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-        <item>Sewa Tempat Kantin di Fakutas Pertanian  </item>
-    </string-array>
-
-    <!-- Bluprint -->
     <string-array name="data_bluprint">
         <item>Blok Judul</item>
         <item>Denah Lokasi</item>
@@ -248,5 +229,13 @@
         <item>Lorem ipsum dolor sit amet</item>
         <item>Lorem ipsum dolor sit amet</item>
     </string-array>
+
+    <!--    BLUEPRINT   -->
+    <string name="jaringan">Interkoneksi Jaringan</string>
+    <string name="teks_deskripsi_bluprint">Sarana dan Prasarana Teknologi Informasi di UNS diletakkan di UPT Teknologi Informasi dan Komunikasi, Fakultas, Lembaga, Biro dan UPT. Kampus UNS yang terletak tidak dalam satu area, semua telah terkoneksi dengan jaringan Fiber Optic (FO), sehingga interkoneksi di UNS terjamin.</string>
+    <string name="network">Network Operating Center</string>
+    <string name="jaringan_bluprint">Isi Bluprint</string>
+    <string name="status_bluprint">Status Bluprint</string>
+    <string name="jumlah">jumlah</string>
 
 </resources>

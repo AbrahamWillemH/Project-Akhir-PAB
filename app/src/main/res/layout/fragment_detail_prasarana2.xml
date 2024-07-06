@@ -1,65 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:background="@drawable/bg_main"
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tv_detail_motor_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="@string/nama"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/img_detail_motor_photo"
-        android:layout_width="0dp"
-        android:layout_height="270dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_motor_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="1.0" />
+        <TableLayout
+            android:id="@+id/header_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
 
-    <TextView
-        android:id="@+id/tv_detail_motor_harga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/harga"
-        app:layout_constraintTop_toBottomOf="@id/img_detail_motor_photo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_detail_prasarana_jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/jenis_prasarana"
+                    style="@style/border.style_5"
+                    android:layout_span="4"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_span="4" />
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tv_detail_motor_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/deskripsi"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_motor_harga"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintWidth_percent="1.0" />
+            <TableRow>
+                <ImageView
+                    android:id="@+id/img_detail_prasarana_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="270dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"/>
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tv_detail_motor_news"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="@string/deskripsi"
-        android:textAlignment="textStart"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail_motor_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_span="4" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_header_rencana_inv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/teks_3tahun_prasarana2"
+                    style="@style/border.style_8"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_detail_prasarana_inv3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/investasi_tahap_3"
+                    style="@style/border.style_7"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_span="4"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_header_sumber_dana"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/teks_rencana_prasarana2"
+                    style="@style/border.style_8"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_header_nilai"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/teks_nilai_prasarana2"
+                    style="@style/border.style_6"/>
+                <TextView
+                    android:id="@+id/tv_header_sumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/teks_sumber_prasarana2"
+                    style="@style/border.style_6"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="3dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_detail_prasarana_rencana_inv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/rencana_investasi"
+                    style="@style/border.style_7"/>
+                <TextView
+                    android:id="@+id/tv_detail_prasarana_sumber_dana"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/sumber_dana"
+                    style="@style/border.style_7"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_span="4"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tv_header_lokasi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/teks_lokasi_prasarana2"
+                    style="@style/border.style_8"/>
+            </TableRow>
+
+            <TableRow android:layout_height="345dp">
+                <org.osmdroid.views.MapView
+                    android:id="@+id/tv_lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/copyright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/teks_copyright_prasarana2"
+                    style="@style/border"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

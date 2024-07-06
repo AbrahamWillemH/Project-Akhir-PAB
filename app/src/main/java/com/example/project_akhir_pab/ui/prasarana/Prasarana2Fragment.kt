@@ -52,8 +52,8 @@ class Prasarana2Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener
                             val prasarana = Prasarana2(
                                 jenisPrasarana = dataMap["Jenis"] as? String ?: "N/A",
                                 sumberDana = dataMap["s_dana"] as? String ?: "N/A",
-                                rencanaInvestasi = (dataMap["rencaran_inv"] as? Long)?.toString() ?: "N/A",
-                                investasiTahap3 = (dataMap["inv_3"] as? Long)?.toString() ?: "N/A",
+                                rencanaInvestasi = convertToString(dataMap["rencaran_inv"]),
+                                investasiTahap3 = convertToString(dataMap["inv_3"]),
                                 photoUrl = dataMap["gambar"] as? String ?: "",
                                 latitude = (dataMap["latitude"] as? Double) ?: -7.558861637127492,
                                 longitude = (dataMap["longitude"] as? Double) ?: 110.8565092460276
@@ -88,5 +88,12 @@ class Prasarana2Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun convertToString(value: Any?): String {
+        return when (value) {
+            is Double, is Long -> value.toString()
+            else -> "N/A"
+        }
     }
 }

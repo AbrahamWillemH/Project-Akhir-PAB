@@ -32,13 +32,10 @@
                     style="@style/border.style_5"
                     android:layout_span="4"/>
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_span="4" />
-            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TableRow>
                 <ImageView
@@ -49,13 +46,9 @@
                     android:scaleType="fitCenter"/>
             </TableRow>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_span="4" />
-            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TableRow>
                 <TextView
@@ -66,10 +59,7 @@
                     android:text="@string/teks_3tahun_prasarana2"
                     style="@style/border.style_8"/>
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="5dp"/>
-            </TableRow>
+
             <TableRow>
                 <TextView
                     android:id="@+id/tv_detail_prasarana_inv3"
@@ -80,13 +70,9 @@
                     style="@style/border.style_7"/>
             </TableRow>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_span="4"/>
-            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TableRow>
                 <TextView
@@ -97,10 +83,9 @@
                     android:text="@string/teks_rencana_prasarana2"
                     style="@style/border.style_8"/>
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="5dp"/>
-            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
             <TableRow>
                 <TextView
                     android:id="@+id/tv_header_nilai"
@@ -117,10 +102,7 @@
                     android:text="@string/teks_sumber_prasarana2"
                     style="@style/border.style_6"/>
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="3dp"/>
-            </TableRow>
+
             <TableRow>
                 <TextView
                     android:id="@+id/tv_detail_prasarana_rencana_inv"
@@ -137,13 +119,11 @@
                     android:text="@string/sumber_dana"
                     style="@style/border.style_7"/>
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_span="4"/>
-            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
             <TableRow>
                 <TextView
                     android:id="@+id/tv_header_lokasi"

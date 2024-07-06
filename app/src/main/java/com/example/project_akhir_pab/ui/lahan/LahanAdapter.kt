@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
 
-class LahanAdapter(private val listLahan: ArrayList<Lahan>) : RecyclerView.Adapter<LahanAdapter.ListViewHolder>() {
+class LahanAdapter(private val listLahan: List<Lahan>) : RecyclerView.Adapter<LahanAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 

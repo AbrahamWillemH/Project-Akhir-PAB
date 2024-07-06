@@ -1,6 +1,7 @@
 package com.example.project_akhir_pab.ui.lahan
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_akhir_pab.R
 import com.example.project_akhir_pab.databinding.FragmentLahanBinding
-
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LahanFragment : Fragment(), LahanAdapter.OnItemClickCallback {
 
     private lateinit var rvLahan: RecyclerView
-    private lateinit var listLahan: ArrayList<Lahan>
+    private lateinit var lahanAdapter: LahanAdapter
+    private lateinit var firestore: FirebaseFirestore
     private var _binding: FragmentLahanBinding? = null
     private val binding get() = _binding!!
 
@@ -31,11 +33,12 @@ class LahanFragment : Fragment(), LahanAdapter.OnItemClickCallback {
         super.onViewCreated(view, savedInstanceState)
 
         rvLahan = binding.recyclerViewLokasiKepemilikanLahan
-        rvLahan.setHasFixedSize(true)
+        rvLahan.layoutManager = LinearLayoutManager(requireContext())
+        lahanAdapter = LahanAdapter(emptyList())
+        rvLahan.adapter = lahanAdapter
 
-        listLahan = ArrayList()
-        listLahan.addAll(getListLahan())
-        showRecyclerList()
+        firestore = FirebaseFirestore.getInstance()
+        fetchLahanData()
     }
 
     override fun onDestroyView() {
@@ -43,27 +46,34 @@ class LahanFragment : Fragment(), LahanAdapter.OnItemClickCallback {
         _binding = null
     }
 
-    private fun getListLahan(): List<Lahan> {
-        val dataLokasi = resources.getStringArray(R.array.data_lokasi)
-        val dataStatus = resources.getStringArray(R.array.data_status)
-        val dataPenggunaan = resources.getStringArray(R.array.data_penggunaan)
-        val dataLuas = resources.getStringArray(R.array.data_luas)
-        val dataLatitude = resources.getStringArray(R.array.data_latitude).map { it.toDouble() }
-        val dataLongitude = resources.getStringArray(R.array.data_longitude).map { it.toDouble() }
-
-        val listLahan = ArrayList<Lahan>()
-        for (i in dataLokasi.indices) {
-            val lahan = Lahan(dataLokasi[i], dataStatus[i], dataPenggunaan[i], dataLuas[i], dataLatitude[i], dataLongitude[i])
-            listLahan.add(lahan)
-        }
-        return listLahan
-    }
-
-    private fun showRecyclerList() {
-        rvLahan.layoutManager = LinearLayoutManager(requireContext())
-        val listLahanAdapter = LahanAdapter(listLahan)
-        listLahanAdapter.setOnItemClickCallback(this)
-        rvLahan.adapter = listLahanAdapter
+    private fun fetchLahanData() {
+        firestore.collection("asset").document("lokasi_kepemilikan_lahan").get()
+            .addOnSuccessListener { document ->
+                if (document != null && document.exists()) {
+                    val dataArray = document.get("Lahan") as? List<Map<String, Any>>
+                    Log.d("LahanFragment", "Data fetched: $dataArray")
+                    val listLahan = dataArray?.map { map ->
+                        Lahan(
+                            lokasiLahan = map["lokasiLahan"] as? String ?: "N/A",
+                            statusKepemilikan = map["statusKepemilikan"] as? String ?: "N/A",
+                            penggunaanLahan = map["penggunaanLahan"] as? String ?: "N/A",
+                            luasLahan = map["luasLahan"] as? String ?: "N/A",
+                            latitude = (map["latitude"] as? Double) ?: 0.0,
+                            longitude = (map["longitude"] as? Double) ?: 0.0
+                        )
+                    }
+                    if (listLahan != null) {
+                        lahanAdapter = LahanAdapter(listLahan)
+                        lahanAdapter.setOnItemClickCallback(this)
+                        rvLahan.adapter = lahanAdapter
+                    }
+                } else {
+                    Log.d("LahanFragment", "Document not found")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.e("LahanFragment", "Error getting documents: ", exception)
+            }
     }
 
     override fun onItemClicked(data: Lahan) {

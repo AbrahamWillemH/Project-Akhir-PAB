@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.`example-project-akhir-pab`.databinding.FragmentDetailLahanBinding
+import com.example.project_akhir_pab.databinding.FragmentDetailLahanBinding
+import com.example.project_akhir_pab.ui.lahan.Lahan
 
 
 class DetailLahanFragment : Fragment() {
@@ -25,7 +26,7 @@ class DetailLahanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val lahan = arguments?.getParcelable<Lahan>("EXTRA_LAHAN")
+        val lahan = arguments?.getSerializable("EXTRA_LAHAN") as? Lahan
 
         if (lahan != null) {
             binding.txtLokasiLahan.text = lahan.lokasiLahan

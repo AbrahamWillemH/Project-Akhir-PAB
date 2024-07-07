@@ -18,13 +18,13 @@ class GedungAdapter(private val gedungList: List<Gedung>) : RecyclerView.Adapter
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GedungViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_gedung, parent, false)
+            .inflate(R.layout.item_aset, parent, false)
         return GedungViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: GedungViewHolder, position: Int) {
         val gedung = gedungList[position]
-        holder.noTextView.text = (position + 1).toString() // Display the item number
+        holder.noTextView.text = (position + 1).toString()
         holder.descriptionTextView.text = gedung.description
         holder.totalTextView.text = gedung.total
         holder.luasTextView.text = gedung.luas

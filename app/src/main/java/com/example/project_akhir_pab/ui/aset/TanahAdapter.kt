@@ -18,13 +18,13 @@ class TanahAdapter(private val tanahList: List<Tanah>) : RecyclerView.Adapter<Ta
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TanahViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_gedung, parent, false)
+            .inflate(R.layout.item_aset, parent, false)
         return TanahViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TanahViewHolder, position: Int) {
         val tanah = tanahList[position]
-        holder.noTextView.text = (position + 1).toString() // Display the item number
+        holder.noTextView.text = (position + 1).toString()
         holder.descriptionTextView.text = tanah.description
         holder.totalTextView.text = tanah.total
         holder.luasTextView.text = tanah.luas

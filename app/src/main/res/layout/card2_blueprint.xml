@@ -14,10 +14,10 @@
 
         <TextView
             android:id="@+id/fungsi_network"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="65dp"
+            android:layout_height="28dp"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="8dp"
             android:text="fungsi"
             android:textColor="@color/design_default_color_primary"
             android:textSize="10sp"
@@ -26,18 +26,18 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="16dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="18dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
             app:layout_constraintEnd_toStartOf="@+id/fungsi_network"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/garis" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="16dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="18dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
             app:layout_constraintEnd_toStartOf="@+id/jumlah_network"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/garis" />
@@ -56,16 +56,15 @@
 
         <TextView
             android:id="@+id/alat_network"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_width="126dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1.5"
             android:text="@string/jaringan_bluprint"
             android:textColor="@color/design_default_color_primary_variant"
             android:textSize="11sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

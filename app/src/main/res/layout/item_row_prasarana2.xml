@@ -31,7 +31,7 @@
                 style="@style/border.style_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5"/>
+                android:layout_weight="1.5" />
 
             <TextView
                 android:id="@+id/tv_detail_prasarana_sumber_dana"

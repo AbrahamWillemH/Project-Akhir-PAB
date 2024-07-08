@@ -14,7 +14,7 @@
     <item
         android:id="@+id/nav_prasarana1"
         android:icon="@drawable/ic_menu_prasarana1"
-        android:title="Prasarana" />
+        android:title="Prasarana dan Prasarana Lain" />
     <item
         android:id="@+id/nav_prasarana2"
         android:icon="@drawable/ic_menu_prasarana1"

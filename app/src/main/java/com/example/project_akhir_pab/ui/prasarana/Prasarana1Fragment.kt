@@ -1,30 +1,31 @@
 package com.example.project_akhir_pab.ui.prasarana
 
+import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.project_akhir_pab.R
-import com.example.project_akhir_pab.databinding.FragmentPrasarana2Binding
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.project_akhir_pab.databinding.FragmentPrasarana1Binding
+import org.json.JSONArray
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
 
-class Prasarana1Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener {
+class Prasarana1Fragment : Fragment(), Prasarana1Adapter.OnItemClickCallback {
 
-    private var _binding: FragmentPrasarana2Binding? = null
+    private var _binding: FragmentPrasarana1Binding? = null
     private val binding get() = _binding!!
-    private lateinit var prasaranaList: ArrayList<Prasarana2>
-    private lateinit var prasaranaAdapter: ListPrasarana2Adapter
-    private lateinit var firestore: FirebaseFirestore
+    private lateinit var prasaranaList: ArrayList<Prasarana1>
+    private lateinit var prasaranaAdapter: Prasarana1Adapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPrasarana2Binding.inflate(inflater, container, false)
+        _binding = FragmentPrasarana1Binding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -32,58 +33,79 @@ class Prasarana1Fragment : Fragment(), ListPrasarana2Adapter.OnItemClickListener
         super.onViewCreated(view, savedInstanceState)
 
         prasaranaList = ArrayList()
-        firestore = FirebaseFirestore.getInstance()
-
-        binding.rvData.layoutManager = LinearLayoutManager(requireContext())
-        prasaranaAdapter = ListPrasarana2Adapter(prasaranaList, this)
-        binding.rvData.adapter = prasaranaAdapter
+        binding.rvData1.layoutManager = LinearLayoutManager(requireContext())
+        prasaranaAdapter = Prasarana1Adapter(prasaranaList)
+        binding.rvData1.adapter = prasaranaAdapter
 
         fetchPrasaranaData()
     }
 
     private fun fetchPrasaranaData() {
-        firestore.collection("asset").document("prasarana_tambahan").get()
-            .addOnSuccessListener { document ->
-                if (document != null && document.exists()) {
-                    val dataArray = document.get("data") as? List<Map<String, Any>>
-                    Log.d("Prasarana2Fragment", "Data fetched: $dataArray")
-                    if (dataArray != null) {
-                        for (dataMap in dataArray) {
-                            val prasarana = Prasarana2(
-                                jenisPrasarana = dataMap["Jenis"] as? String ?: "N/A",
-                                sumberDana = dataMap["s_dana"] as? String ?: "N/A",
-                                rencanaInvestasi = (dataMap["rencaran_inv"] as? Long)?.toString() ?: "N/A",
-                                investasiTahap3 = (dataMap["inv_3"] as? Long)?.toString() ?: "N/A",
-                                photoUrl = dataMap["gambar"] as? String ?: "",
-                                latitude = (dataMap["latitude"] as? Double) ?: -7.558861637127492,
-                                longitude = (dataMap["longitude"] as? Double) ?: 110.8565092460276
-                            )
-                            Log.d("Prasarana2Fragment", "Parsed prasarana: $prasarana")
-                            prasaranaList.add(prasarana)
-                        }
-                        prasaranaAdapter.notifyDataSetChanged()
-                    } else {
-                        Log.d("Prasarana2Fragment", "null")
-                    }
-                } else {
-                    Log.d("Prasarana2Fragment", "null")
-                }
+        val urlString = "https://firestore.googleapis.com/v1/projects/asset-pab/databases/(default)/documents/asset/prasarana"
+        Thread {
+            val url = URL(urlString)
+            val connection = url.openConnection() as HttpURLConnection
+            connection.requestMethod = "GET"
+            connection.connect()
+
+            val responseCode = connection.responseCode
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                val inputStream = connection.inputStream
+                val response = inputStream.bufferedReader().use { it.readText() }
+                parsePrasaranaData(response)
+            } else {
+                Log.e("Prasarana1Fragment", "Error fetching data")
             }
-            .addOnFailureListener { exception ->
-                Log.e("Prasarana2Fragment", "null", exception)
-            }
+            connection.disconnect()
+        }.start()
     }
 
+    private fun parsePrasaranaData(response: String) {
+        try {
+            val jsonObject = JSONObject(response)
+            val prasaranaArray = jsonObject.getJSONObject("fields").getJSONObject("prasarana").getJSONObject("arrayValue").getJSONArray("values")
+            val prasaranaLainArray = jsonObject.getJSONObject("fields").getJSONObject("prasarana_lain").getJSONObject("arrayValue").getJSONArray("values")
 
+            addPrasaranaItems(prasaranaArray)
+            addPrasaranaItems(prasaranaLainArray)
 
-    override fun onItemClicked(prasarana: Prasarana2) {
-        Log.d("Prasarana2Fragment", "Passing data: $prasarana")
-        val bundle = Bundle().apply {
-            putParcelable("EXTRA_PRASARANA2", prasarana)
+            activity?.runOnUiThread {
+                prasaranaAdapter.notifyDataSetChanged()
+            }
+        } catch (e: Exception) {
+            Log.e("Prasarana1Fragment", "Error parsing data", e)
         }
-        findNavController().navigate(R.id.action_nav_prasarana2_to_detailPrasarana2, bundle)
     }
 
+    private fun addPrasaranaItems(prasaranaArray: JSONArray) {
+        for (i in 0 until prasaranaArray.length()) {
+            val prasaranaObject = prasaranaArray.getJSONObject(i).getJSONObject("mapValue").getJSONObject("fields")
+
+            if (prasaranaObject.has("jenis")) {
+                val jenis = prasaranaObject.getJSONObject("jenis").getString("stringValue")
+                val jumlah = if (prasaranaObject.has("jumlah")) prasaranaObject.getJSONObject("jumlah").optInt("integerValue", -1) else -1
+                val luas = if (prasaranaObject.has("luas")) prasaranaObject.getJSONObject("luas").optInt("integerValue", -1) else -1
+                val kepemilikan = if (prasaranaObject.has("kepemilikan")) prasaranaObject.getJSONObject("kepemilikan").getBoolean("booleanValue") else false
+                val kondisi = if (prasaranaObject.has("kondisi")) prasaranaObject.getJSONObject("kondisi").getBoolean("booleanValue") else false
+
+                val milikString = if (kepemilikan) "Sendiri" else "Sewa"
+                val kondisiString = if (kondisi) "Terawat" else "Tidak Terawat"
+                val luasFormatted = if (luas == -1) {
+                    "N/A"
+                } else {
+                    DecimalFormat("#,###").format(luas)
+                }
+
+                val prasarana = Prasarana1(jenis, jumlah, luasFormatted, kepemilikan, kondisi, "$milikString, $kondisiString")
+                prasaranaList.add(prasarana)
+            }
+        }
+    }
+
+    override fun onItemClicked(data: Prasarana1) {
+        Log.d("Prasarana1Fragment", "Clicked item: $data")
+        // Handle item click if needed
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

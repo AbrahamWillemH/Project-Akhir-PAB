@@ -1,17 +1,91 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.project_akhir_pab.ui.prasarana.Prasarana1Fragment">
+    android:background="@drawable/bg_main"
+    android:padding="8dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPrasarana1"
-        android:layout_width="match_parent"
+    <!-- Table Layout with Title -->
+    <TableLayout
+        android:id="@+id/header_table"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"/>
+        <!-- Title Row -->
+        <TableRow>
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/teks_judul_prasarana1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                style="@style/border.style_4"
+                android:layout_span="4" />
+        </TableRow>
 
-</RelativeLayout>
+        <!-- Empty Row for Spacing -->
+        <TableRow>
+        </TableRow>
+
+        <!-- Header Rows -->
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_header_jenis"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:text="@string/teks_jenis_prasarana1"
+                style="@style/border.style_1"/>
+
+            <TextView
+                android:id="@+id/tv_header_rencana_inv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:text="@string/teks_3tahun_prasarana1"
+                style="@style/border.style_1" />
+
+            <TextView
+                android:id="@+id/tv_header_sumber_dana"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:text="@string/teks_luas_prasarana1"
+                style="@style/border.style_1"/>
+
+            <TextView
+                android:id="@+id/tv_header_nilai"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6"
+                android:text="@string/teks_milik_prasarana1"
+                style="@style/border.style_3"/>
+
+            <TextView
+                android:id="@+id/tv_header_sumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:text="@string/teks_kondisi_prasarana1"
+                style="@style/border.style_3"/>
+        </TableRow>
+    </TableLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_table" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

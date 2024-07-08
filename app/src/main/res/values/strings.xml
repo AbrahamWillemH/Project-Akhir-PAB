@@ -30,34 +30,25 @@
     <string name="luas">...</string>
 
     <!--  PRASARANA 1  -->
-    <string-array name="data_nama_prasarana">
-        <item>Tanah</item>
-        <item>Peralatan dan Mesin</item>
-        <item>Gedung dan Bangunan</item>
-        <item>Jalan dan Jembatan</item>
-        <item>Irigasi</item>
-    </string-array>
-    <string-array name="data_jenis_prasarana">
-        <item>Tanah Hak Milik</item>
-        <item>Mesin Berat</item>
-        <item>Gedung Baru</item>
-        <item>Jalan Baru</item>
-        <item>Jalur Irigasi</item>
-    </string-array>
-    <string-array name="data_deskripsi_prasarana">
-        <item>Lorem ipsum dolor sit amet</item>
-        <item>Lorem ipsum dolor sit amet</item>
-        <item>Lorem ipsum dolor sit amet</item>
-        <item>Lorem ipsum dolor sit amet</item>
-        <item>Lorem ipsum dolor sit amet</item>
-    </string-array>
-    <string-array name="data_jumlah_unit">
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-        <item>10</item>
-    </string-array>
+    <string name="teks_judul_prasarana1">Data prasarana yang digunakan institusi dalam penyelenggaraan program</string>
+    <string name="teks_jenis_prasarana1">Jenis Prasarana</string>
+    <string name="teks_3tahun_prasarana1">Jumlah Unit</string>
+    <string name="teks_luas_prasarana1">Total Luas</string>
+    <string name="teks_milik_prasarana1">Kepemilikan</string>
+    <string name="teks_kondisi_prasarana1">Kondisi</string>
+    <string name="teks_judul_prasarana1lain">Data Prasarana Yang Digunakan Institusi dalam penyelenggaraan program</string>
+    <string name="teks_jenis_prasarana1lain">Jenis Prasarana</string>
+    <string name="teks_3tahun_prasarana1lain">Jumlah Unit</string>
+    <string name="teks_luas_prasarana1lain">Total Luas</string>
+    <string name="teks_milik_prasarana1lain">Kepemilikan</string>
+    <string name="teks_kondisi_prasarana1lain">Kondisi</string>
+
+    <style name="border.style_510">
+        <item name="android:background">@drawable/table_prasarana_border_style_4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
     <!-- Tahun Aset -->
     <string-array name="tahun_array">

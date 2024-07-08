@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.project_akhir_pab.R
 import com.example.project_akhir_pab.databinding.FragmentHomeBinding
 import com.example.project_akhir_pab.ui.aset.AsetFragment
@@ -27,23 +28,23 @@ class HomeFragment : Fragment() {
 
         // Set OnClickListener for each LinearLayout in GridLayout
         binding.image1.setOnClickListener {
-            navigateToFragment(AsetFragment())
+            findNavController().navigate(R.id.action_homeFragment_to_asetFragment)
         }
 
         binding.image2.setOnClickListener {
-            navigateToFragment(BlueprintFragment())
+            findNavController().navigate(R.id.action_homeFragment_to_bluprintFragment)
         }
 
-//        binding.image3.setOnClickListener {
-//            navigateToFragment(Prasarana1Fragment())
-//        }
+        binding.image3.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_prasarana1Fragment)
+        }
 
         binding.image4.setOnClickListener {
-            navigateToFragment(Prasarana2Fragment())
+            findNavController().navigate(R.id.action_homeFragment_to_prasarana2Fragment)
         }
 
         binding.image5.setOnClickListener {
-            navigateToFragment(LahanFragment())
+            findNavController().navigate(R.id.action_homeFragment_to_lahanFragment)
         }
 
         return root
